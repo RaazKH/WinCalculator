@@ -9,27 +9,161 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:ConnectionId='2' 
-            x:Name="SayHelloButton"
-            Content="Say Hello" 
-            HorizontalAlignment="Left"
-            Margin="389,318,0,0" 
-            VerticalAlignment="Top" 
-            Height="77" 
-            Width="132"
-                                        
-            BorderThickness="1,1,8,8"/>
-        <TextBox x:ConnectionId='3' 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:ConnectionId='2'
             x:Name="textBox1"
-            HorizontalAlignment="Left"
-            Margin="389,167,0,0"
-            Text="Hello there!"
-            VerticalAlignment="Top" 
-            Height="80" 
-            Width="360" 
-            FontSize="36"
-            BorderThickness="1,1,8,8"
+            Text="0"
+            Grid.ColumnSpan="5"
+            TextAlignment="Right"
+            FontSize="50"
             />
+
+        <Button x:ConnectionId='3' 
+            x:Name="b0"
+            Content="0"
+                                        
+            Grid.Row="4" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='4' 
+            x:Name="b1"
+            Content="1"
+                                        
+            Grid.Column="1"
+            Grid.Row="4" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='5' 
+            x:Name="b2"
+            Content="2"
+                                        
+            Grid.Column="2"
+            Grid.Row="4" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='6' 
+            x:Name="b3"
+            Content="3"
+                                        
+            Grid.Column="3"
+            Grid.Row="4" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='7' 
+            x:Name="b4"
+            Content="4"
+                                        
+            Grid.Column="4"
+            Grid.Row="4" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='8' 
+            x:Name="b5"
+            Content="5"
+                                        
+            Grid.Row="3" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='9' 
+            x:Name="b6"
+            Content="6"
+                                        
+            Grid.Column="1"
+            Grid.Row="3" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='10' 
+            x:Name="b7"
+            Content="7"
+                                        
+            Grid.Column="2"
+            Grid.Row="3" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='11' 
+            x:Name="b8"
+            Content="8"
+                                        
+            Grid.Column="3"
+            Grid.Row="3" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='12' 
+            x:Name="b9"
+            Content="9"
+                                        
+            Grid.Column="4"
+            Grid.Row="3" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='13' 
+            x:Name="bplus"
+            Content="+"
+                                        
+            Grid.Row="2" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='14' 
+            x:Name="bminus"
+            Content="-"
+                                        
+            Grid.Column="1"
+            Grid.Row="2"
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='15' 
+            x:Name="btimes"
+            Content="X"
+                                        
+            Grid.Column="2"
+            Grid.Row="2" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"
+            Margin="5,5,5,5"/>
+        <Button x:ConnectionId='16' 
+            x:Name="bdivided"
+            Content="/"
+                                        
+            Grid.Column="3"
+            Grid.Row="2" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
+        <Button x:ConnectionId='17' 
+            x:Name="bequals"
+            Content="="
+                                        
+            Grid.Column="4"
+            Grid.Row="2" 
+            HorizontalAlignment="Stretch" 
+            Margin="5,5,5,5" 
+            VerticalAlignment="Stretch"/>
     </Grid>
 </Page>
 

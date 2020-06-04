@@ -42,11 +42,9 @@ namespace Calculator
             var randomColorBrush = new SolidColorBrush(Color.FromArgb(255, rgb[0], rgb[1], rgb[2]));
 
             textBox1.Text = "Hello there!";
-            textBox1.BorderBrush = randomColorBrush;
-            textBox1.Foreground = randomColorBrush;
 
-            SayHelloButton.BorderBrush = randomColorBrush;
-            SayHelloButton.Foreground = randomColorBrush;
+            //SayHelloButton.BorderBrush = randomColorBrush;
+            //SayHelloButton.Foreground = randomColorBrush;
         }
     }
 }
