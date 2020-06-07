@@ -14,9 +14,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -27,143 +27,270 @@
         <TextBlock
             x:Name="textBox1"
             Text="0"
-            Grid.ColumnSpan="5"
+            Grid.ColumnSpan="4"
             TextAlignment="Right"
-            FontSize="50"
-            
-            />
+            FontSize="50"/>
 
         <Button 
             x:Name="b0"
             Content="0"
             Click="SayHelloButton_Click"
-            Grid.Row="4" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="5" 
+            Grid.Column="1"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b1"
             Content="1"
             Click="SayHelloButton_Click"
-            Grid.Column="1"
+            
             Grid.Row="4" 
-            HorizontalAlignment="Stretch" 
+            Grid.Column="0"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b2"
             Content="2"
             Click="SayHelloButton_Click"
-            Grid.Column="2"
-            Grid.Row="4" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="4"
+            Grid.Column="1"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"  
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b3"
             Content="3"
             Click="SayHelloButton_Click"
-            Grid.Column="3"
+            
             Grid.Row="4" 
-            HorizontalAlignment="Stretch" 
+            Grid.Column="2"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b4"
             Content="4"
             Click="SayHelloButton_Click"
-            Grid.Column="4"
-            Grid.Row="4" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="3" 
+            Grid.Column="0"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b5"
             Content="5"
             Click="SayHelloButton_Click"
+            
             Grid.Row="3" 
-            HorizontalAlignment="Stretch" 
+            Grid.Column="1"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b6"
             Content="6"
             Click="SayHelloButton_Click"
-            Grid.Column="1"
+            
             Grid.Row="3" 
+            Grid.Column="2"
+            
+            Margin="5,5,5,5"
+            
             HorizontalAlignment="Stretch" 
-            Margin="5,5,5,5" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b7"
             Content="7"
             Click="SayHelloButton_Click"
-            Grid.Column="2"
-            Grid.Row="3" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="2" 
+            Grid.Column="0"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b8"
             Content="8"
             Click="SayHelloButton_Click"
-            Grid.Column="3"
-            Grid.Row="3" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="2" 
+            Grid.Column="1"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="b9"
             Content="9"
             Click="SayHelloButton_Click"
-            Grid.Column="4"
-            Grid.Row="3" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="2" 
+            Grid.Column="2"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
+        <Button 
+            x:Name="bclear"
+            Content="Clear"
+            Click="SayHelloButton_Click"
+            
+            Grid.Row="6"
+            Grid.Column="0"
+            
+            Margin="5,5,5,5"
+            
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        
+        <Button 
+            x:Name="bdecimal"
+            Content="."
+            Click="SayHelloButton_Click"
+            
+            Grid.Row="5"
+            Grid.Column="2"
+            
+            Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        
+        <Button 
+            x:Name="bopenP"
+            Content="("
+            Click="SayHelloButton_Click"
+            
+            Grid.Row="1" 
+            Grid.Column="0"
+            
+            Margin="5,5,5,5"
+            
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        
+        <Button 
+            x:Name="bcloseP"
+            Content=")"
+            Click="SayHelloButton_Click"
+            
+            Grid.Row="1" 
+            Grid.Column="1"
+            
+            Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        
+        <Button 
+            x:Name="bbackspace"
+            Content="DEL"
+            Click="SayHelloButton_Click"
+            
+            Grid.Row="1" 
+            Grid.Column="2" 
+            
+            Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="bplus"
             Content="+"
             Click="SayHelloButton_Click"
-            Grid.Row="2" 
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="4" 
+            Grid.Column="3"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="bminus"
             Content="-"
             Click="SayHelloButton_Click"
-            Grid.Column="1"
-            Grid.Row="2"
-            HorizontalAlignment="Stretch" 
+            
+            Grid.Row="3"
+            Grid.Column="4"
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="btimes"
             Content="X"
             Click="SayHelloButton_Click"
-            Grid.Column="2"
-            Grid.Row="2" 
+            
+            Grid.Row="2"
+            Grid.Column="4"
+            
+            Margin="5,5,5,5"
+        
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"
-            Margin="5,5,5,5"/>
+            VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="bdivided"
-            Content="/"
+            Content="÷"
+            
             Click="SayHelloButton_Click"
+            
+            Grid.Row="1" 
             Grid.Column="3"
-            Grid.Row="2" 
-            HorizontalAlignment="Stretch" 
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
+        
         <Button 
             x:Name="bequals"
             Content="="
+            
             Click="SayHelloButton_Click"
+            
+            Grid.Row="5" 
             Grid.Column="4"
-            Grid.Row="2" 
-            HorizontalAlignment="Stretch" 
+            
             Margin="5,5,5,5" 
+            
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
     </Grid>
 </Page>
