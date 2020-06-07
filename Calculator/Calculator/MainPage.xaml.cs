@@ -21,30 +21,41 @@ namespace Calculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Random rand;
         public MainPage()
         {
             this.InitializeComponent();
-            rand = new Random();
         }
 
-        private byte[] GetRandomBytes(int n)
+        private void button_click(object sender, RoutedEventArgs e)
         {
-            var randomBytes = new byte[n];
-            rand.NextBytes(randomBytes);
-            return randomBytes;
+            Button clickedButton = (sender as Button);
+            var texr = clickedButton.Tag.ToString();
+
+            if(textBox1.Text == "0")
+            {
+                textBox1.Text = texr;
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + texr;
+            }
         }
 
-        private void SayHelloButton_Click(object sender, RoutedEventArgs e)
+        private void button_special(object sender, RoutedEventArgs e)
         {
-            byte[] rgb = GetRandomBytes(3);
-
-            var randomColorBrush = new SolidColorBrush(Color.FromArgb(255, rgb[0], rgb[1], rgb[2]));
-
-            textBox1.Text = "Hello there!";
-
-            //SayHelloButton.BorderBrush = randomColorBrush;
-            //SayHelloButton.Foreground = randomColorBrush;
+            string texr = (sender as Button).Tag.ToString();
+            if(texr == "clear")
+            {
+                textBox1.Text = "0";
+            }
+            else if(texr == "back" && textBox1.Text.Length > 1)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+            else if (texr == "back" && textBox1.Text.Length == 1)
+            {
+                textBox1.Text = "0";
+            }
         }
     }
 }

@@ -29,12 +29,16 @@
             Text="0"
             Grid.ColumnSpan="4"
             TextAlignment="Right"
-            FontSize="50"/>
+            FontSize="50"
+            TextWrapping="Wrap"
+            
+            IsTextScaleFactorEnabled="True"/>
 
         <Button 
             x:Name="b0"
             Content="0"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="0"
             
             Grid.Row="5" 
             Grid.Column="1"
@@ -47,7 +51,8 @@
         <Button 
             x:Name="b1"
             Content="1"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="1"
             
             Grid.Row="4" 
             Grid.Column="0"
@@ -60,7 +65,8 @@
         <Button 
             x:Name="b2"
             Content="2"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="2"
             
             Grid.Row="4"
             Grid.Column="1"
@@ -73,7 +79,8 @@
         <Button 
             x:Name="b3"
             Content="3"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="3"
             
             Grid.Row="4" 
             Grid.Column="2"
@@ -86,7 +93,8 @@
         <Button 
             x:Name="b4"
             Content="4"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="4"
             
             Grid.Row="3" 
             Grid.Column="0"
@@ -99,7 +107,8 @@
         <Button 
             x:Name="b5"
             Content="5"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="5"
             
             Grid.Row="3" 
             Grid.Column="1"
@@ -112,7 +121,8 @@
         <Button 
             x:Name="b6"
             Content="6"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="6"
             
             Grid.Row="3" 
             Grid.Column="2"
@@ -125,7 +135,8 @@
         <Button 
             x:Name="b7"
             Content="7"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="7"
             
             Grid.Row="2" 
             Grid.Column="0"
@@ -138,7 +149,8 @@
         <Button 
             x:Name="b8"
             Content="8"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="8"
             
             Grid.Row="2" 
             Grid.Column="1"
@@ -151,7 +163,8 @@
         <Button 
             x:Name="b9"
             Content="9"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="9"
             
             Grid.Row="2" 
             Grid.Column="2"
@@ -164,7 +177,8 @@
         <Button 
             x:Name="bclear"
             Content="Clear"
-            Click="SayHelloButton_Click"
+            Click="button_special"
+            Tag="clear"
             
             Grid.Row="6"
             Grid.Column="0"
@@ -177,7 +191,8 @@
         <Button 
             x:Name="bdecimal"
             Content="."
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="."
             
             Grid.Row="5"
             Grid.Column="2"
@@ -190,7 +205,8 @@
         <Button 
             x:Name="bopenP"
             Content="("
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="("
             
             Grid.Row="1" 
             Grid.Column="0"
@@ -203,7 +219,8 @@
         <Button 
             x:Name="bcloseP"
             Content=")"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag=")"
             
             Grid.Row="1" 
             Grid.Column="1"
@@ -216,7 +233,8 @@
         <Button 
             x:Name="bbackspace"
             Content="DEL"
-            Click="SayHelloButton_Click"
+            Click="button_special"
+            Tag="back"
             
             Grid.Row="1" 
             Grid.Column="2" 
@@ -229,7 +247,8 @@
         <Button 
             x:Name="bplus"
             Content="+"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="+"
             
             Grid.Row="4" 
             Grid.Column="3"
@@ -242,7 +261,8 @@
         <Button 
             x:Name="bminus"
             Content="-"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="-"
             
             Grid.Row="3"
             Grid.Column="4"
@@ -255,7 +275,8 @@
         <Button 
             x:Name="btimes"
             Content="X"
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="x"
             
             Grid.Row="2"
             Grid.Column="4"
@@ -268,8 +289,8 @@
         <Button 
             x:Name="bdivided"
             Content="÷"
-            
-            Click="SayHelloButton_Click"
+            Click="button_click"
+            Tag="÷"
             
             Grid.Row="1" 
             Grid.Column="3"
@@ -282,8 +303,7 @@
         <Button 
             x:Name="bequals"
             Content="="
-            
-            Click="SayHelloButton_Click"
+            Click="button_click"
             
             Grid.Row="5" 
             Grid.Column="4"

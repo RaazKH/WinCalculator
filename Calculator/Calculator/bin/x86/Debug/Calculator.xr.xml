@@ -24,11 +24,14 @@
       <RootProperty Name="Text" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="IsTextScaleFactorEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Tag" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
