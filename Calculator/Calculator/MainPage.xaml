@@ -303,7 +303,7 @@
         <Button 
             x:Name="bequals"
             Content="="
-            Click="button_click"
+            Click="button_evaluate"
             
             Grid.Row="5" 
             Grid.Column="4"

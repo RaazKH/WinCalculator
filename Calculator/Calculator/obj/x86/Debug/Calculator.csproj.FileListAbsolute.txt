@@ -42,3 +42,4 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\qualifi
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\Calculator.csprojAssemblyReference.cache

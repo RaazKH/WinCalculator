@@ -57,5 +57,10 @@ namespace Calculator
                 textBox1.Text = "0";
             }
         }
+
+        private void button_evaluate (object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
