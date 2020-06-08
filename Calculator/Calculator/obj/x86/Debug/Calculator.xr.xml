@@ -11,6 +11,7 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootEvent Name="KeyUp" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRow" />
@@ -25,11 +26,13 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="IsTextScaleFactorEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />

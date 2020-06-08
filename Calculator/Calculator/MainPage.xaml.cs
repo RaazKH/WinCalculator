@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
+using System.Diagnostics;
 
 namespace Calculator
 {
@@ -24,6 +25,9 @@ namespace Calculator
         public MainPage()
         {
             this.InitializeComponent();
+
+            //?
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
         }
 
         private void button_click(object sender, RoutedEventArgs e)
@@ -31,7 +35,7 @@ namespace Calculator
             Button clickedButton = (sender as Button);
             var texr = clickedButton.Tag.ToString();
 
-            if(textBox1.Text == "0")
+            if(textBox1.Text == "0" && texr != ".")
             {
                 textBox1.Text = texr;
             }
@@ -60,7 +64,43 @@ namespace Calculator
 
         private void button_evaluate (object sender, RoutedEventArgs e)
         {
+            string eval = textBox1.Text;
+            int len = eval.Length;
+            // check for valid characters
+            // 40 = (
+            // 41 = )
+            // 42 = *
+            // 43 = +
+            // 44 = , IGNORE
+            // 45 = -
+            // 46 = .
+            // 47 = /
+            // 48-57 = 0-9 
+            // 120 = x
+            // 247 = ÷
 
+            for (int i = 0; i < len; i++)
+            {
+                int a = (int)eval[i];
+                if((a >= 40 && a < 44) || (a > 44 && a <= 57))
+                {
+                    // valid
+                }
+                else
+                {
+                    Debug.WriteLine("Invalid character:" + a);
+                    return;
+                }
+                
+            }
+        }
+
+        private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
+        {
+            if(e.Key == Windows.System.VirtualKey.B)
+            {
+                button_click(b1, e);
+            }
         }
     }
 }

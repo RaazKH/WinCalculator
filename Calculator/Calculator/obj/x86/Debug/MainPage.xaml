@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:ConnectionId='2'                        >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -24,21 +24,22 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:ConnectionId='2'
+        <TextBlock x:ConnectionId='3'
             x:Name="textBox1"
             Text="0"
             Grid.ColumnSpan="4"
             TextAlignment="Right"
-            FontSize="50"
+            FontSize="40"
             TextWrapping="Wrap"
-            
+            Margin="5,0,5,0" 
             IsTextScaleFactorEnabled="True"/>
 
-        <Button x:ConnectionId='3' 
+        <Button x:ConnectionId='4' 
             x:Name="b0"
             Content="0"
                                 
             Tag="0"
+            FontSize="25"
             
             Grid.Row="5" 
             Grid.Column="1"
@@ -48,11 +49,12 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='4' 
+        <Button x:ConnectionId='5' 
             x:Name="b1"
             Content="1"
                                 
             Tag="1"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="0"
@@ -62,11 +64,12 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='5' 
+        <Button x:ConnectionId='6' 
             x:Name="b2"
             Content="2"
                                 
             Tag="2"
+            FontSize="25"
             
             Grid.Row="4"
             Grid.Column="1"
@@ -76,11 +79,12 @@
             HorizontalAlignment="Stretch"  
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='6' 
+        <Button x:ConnectionId='7' 
             x:Name="b3"
             Content="3"
                                 
             Tag="3"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="2"
@@ -90,11 +94,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='7' 
+        <Button x:ConnectionId='8' 
             x:Name="b4"
             Content="4"
                                 
             Tag="4"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="0"
@@ -104,11 +109,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='8' 
+        <Button x:ConnectionId='9' 
             x:Name="b5"
             Content="5"
                                 
             Tag="5"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="1"
@@ -118,11 +124,12 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='9' 
+        <Button x:ConnectionId='10' 
             x:Name="b6"
             Content="6"
                                 
             Tag="6"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="2"
@@ -132,11 +139,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='10' 
+        <Button x:ConnectionId='11' 
             x:Name="b7"
             Content="7"
                                 
             Tag="7"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="0"
@@ -146,11 +154,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='11' 
+        <Button x:ConnectionId='12' 
             x:Name="b8"
             Content="8"
                                 
             Tag="8"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="1"
@@ -160,11 +169,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='12' 
+        <Button x:ConnectionId='13' 
             x:Name="b9"
             Content="9"
                                 
             Tag="9"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="2"
@@ -174,7 +184,7 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='13' 
+        <Button x:ConnectionId='14' 
             x:Name="bclear"
             Content="Clear"
                                   
@@ -188,11 +198,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='14' 
+        <Button x:ConnectionId='15' 
             x:Name="bdecimal"
             Content="."
                                 
             Tag="."
+            FontSize="25"
             
             Grid.Row="5"
             Grid.Column="2"
@@ -202,11 +213,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='15' 
+        <Button x:ConnectionId='16' 
             x:Name="bopenP"
             Content="("
                                 
             Tag="("
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="0"
@@ -216,11 +228,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='16' 
+        <Button x:ConnectionId='17' 
             x:Name="bcloseP"
             Content=")"
                                 
             Tag=")"
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="1"
@@ -230,7 +243,7 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='17' 
+        <Button x:ConnectionId='18' 
             x:Name="bbackspace"
             Content="DEL"
                                   
@@ -244,11 +257,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='18' 
+        <Button x:ConnectionId='19' 
             x:Name="bplus"
             Content="+"
                                 
             Tag="+"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="3"
@@ -258,11 +272,12 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='19' 
+        <Button x:ConnectionId='20' 
             x:Name="bminus"
             Content="-"
                                 
             Tag="-"
+            FontSize="25"
             
             Grid.Row="3"
             Grid.Column="4"
@@ -272,11 +287,12 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='20' 
+        <Button x:ConnectionId='21' 
             x:Name="btimes"
-            Content="X"
+            Content="x"
                                 
-            Tag="x"
+            Tag="*"
+            FontSize="25"
             
             Grid.Row="2"
             Grid.Column="4"
@@ -286,11 +302,12 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='21' 
+        <Button x:ConnectionId='22' 
             x:Name="bdivided"
             Content="÷"
                                 
-            Tag="÷"
+            Tag="/"
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="3"
@@ -300,10 +317,11 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
         
-        <Button x:ConnectionId='22' 
+        <Button x:ConnectionId='23' 
             x:Name="bequals"
             Content="="
                                    
+            FontSize="25"
             
             Grid.Row="5" 
             Grid.Column="4"

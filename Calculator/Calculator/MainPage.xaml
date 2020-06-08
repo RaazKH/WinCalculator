@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid KeyUp="Grid_KeyPressed">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -29,9 +29,9 @@
             Text="0"
             Grid.ColumnSpan="4"
             TextAlignment="Right"
-            FontSize="50"
+            FontSize="40"
             TextWrapping="Wrap"
-            
+            Margin="5,0,5,0" 
             IsTextScaleFactorEnabled="True"/>
 
         <Button 
@@ -39,6 +39,7 @@
             Content="0"
             Click="button_click"
             Tag="0"
+            FontSize="25"
             
             Grid.Row="5" 
             Grid.Column="1"
@@ -53,6 +54,7 @@
             Content="1"
             Click="button_click"
             Tag="1"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="0"
@@ -67,6 +69,7 @@
             Content="2"
             Click="button_click"
             Tag="2"
+            FontSize="25"
             
             Grid.Row="4"
             Grid.Column="1"
@@ -81,6 +84,7 @@
             Content="3"
             Click="button_click"
             Tag="3"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="2"
@@ -95,6 +99,7 @@
             Content="4"
             Click="button_click"
             Tag="4"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="0"
@@ -109,6 +114,7 @@
             Content="5"
             Click="button_click"
             Tag="5"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="1"
@@ -123,6 +129,7 @@
             Content="6"
             Click="button_click"
             Tag="6"
+            FontSize="25"
             
             Grid.Row="3" 
             Grid.Column="2"
@@ -137,6 +144,7 @@
             Content="7"
             Click="button_click"
             Tag="7"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="0"
@@ -151,6 +159,7 @@
             Content="8"
             Click="button_click"
             Tag="8"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="1"
@@ -165,6 +174,7 @@
             Content="9"
             Click="button_click"
             Tag="9"
+            FontSize="25"
             
             Grid.Row="2" 
             Grid.Column="2"
@@ -193,6 +203,7 @@
             Content="."
             Click="button_click"
             Tag="."
+            FontSize="25"
             
             Grid.Row="5"
             Grid.Column="2"
@@ -207,6 +218,7 @@
             Content="("
             Click="button_click"
             Tag="("
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="0"
@@ -221,6 +233,7 @@
             Content=")"
             Click="button_click"
             Tag=")"
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="1"
@@ -249,6 +262,7 @@
             Content="+"
             Click="button_click"
             Tag="+"
+            FontSize="25"
             
             Grid.Row="4" 
             Grid.Column="3"
@@ -263,6 +277,7 @@
             Content="-"
             Click="button_click"
             Tag="-"
+            FontSize="25"
             
             Grid.Row="3"
             Grid.Column="4"
@@ -274,9 +289,10 @@
         
         <Button 
             x:Name="btimes"
-            Content="X"
+            Content="x"
             Click="button_click"
-            Tag="x"
+            Tag="*"
+            FontSize="25"
             
             Grid.Row="2"
             Grid.Column="4"
@@ -290,7 +306,8 @@
             x:Name="bdivided"
             Content="÷"
             Click="button_click"
-            Tag="÷"
+            Tag="/"
+            FontSize="25"
             
             Grid.Row="1" 
             Grid.Column="3"
@@ -304,6 +321,7 @@
             x:Name="bequals"
             Content="="
             Click="button_evaluate"
+            FontSize="25"
             
             Grid.Row="5" 
             Grid.Column="4"
