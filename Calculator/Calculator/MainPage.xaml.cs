@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 using System.Diagnostics;
+using Windows.System;
 
 namespace Calculator
 {
@@ -26,8 +27,12 @@ namespace Calculator
         {
             this.InitializeComponent();
 
-            //?
-            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+            // worthless
+            //this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+
+            // initializes keyboard input on app startup
+            // without this a button will need to be hit on the screen before keyboard works
+            this.Loaded += delegate { this.Focus(FocusState.Keyboard); };
         }
 
         private void button_click(object sender, RoutedEventArgs e)
@@ -97,10 +102,48 @@ namespace Calculator
 
         private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
         {
-            if(e.Key == Windows.System.VirtualKey.B)
+            if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
             {
                 button_click(b1, e);
             }
+            else if(e.Key == VirtualKey.Number2 || e.Key == VirtualKey.NumberPad2)
+            {
+                button_click(b2, e);
+            }
+            else if (e.Key == VirtualKey.Number3 || e.Key == VirtualKey.NumberPad3)
+            {
+                button_click(b3, e);
+            }
+            else if (e.Key == VirtualKey.Number4 || e.Key == VirtualKey.NumberPad4)
+            {
+                button_click(b4, e);
+            }
+            else if (e.Key == VirtualKey.Number5 || e.Key == VirtualKey.NumberPad5)
+            {
+                button_click(b5, e);
+            }
+            else if (e.Key == VirtualKey.Number6 || e.Key == VirtualKey.NumberPad6)
+            {
+                button_click(b6, e);
+            }
+            else if (e.Key == VirtualKey.Number7 || e.Key == VirtualKey.NumberPad7)
+            {
+                button_click(b7, e);
+            }
+            else if (e.Key == VirtualKey.Number8 || e.Key == VirtualKey.NumberPad8)
+            {
+                button_click(b8, e);
+            }
+            else if (e.Key == VirtualKey.Number9 || e.Key == VirtualKey.NumberPad9)
+            {
+                button_click(b9, e);
+            }
+            else if (e.Key == VirtualKey.Number0 || e.Key == VirtualKey.NumberPad0)
+            {
+                button_click(b0, e);
+            }
+
+
         }
     }
 }
