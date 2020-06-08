@@ -27,8 +27,8 @@ namespace Calculator
         {
             this.InitializeComponent();
 
-            // worthless
-            //this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+            // need this too for some reason
+            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
 
             // initializes keyboard input on app startup
             // without this a button will need to be hit on the screen before keyboard works
@@ -40,7 +40,7 @@ namespace Calculator
             Button clickedButton = (sender as Button);
             var texr = clickedButton.Tag.ToString();
 
-            if(textBox1.Text == "0" && texr != ".")
+            if (textBox1.Text == "0" && texr != ".")
             {
                 textBox1.Text = texr;
             }
@@ -53,11 +53,11 @@ namespace Calculator
         private void button_special(object sender, RoutedEventArgs e)
         {
             string texr = (sender as Button).Tag.ToString();
-            if(texr == "clear")
+            if (texr == "clear")
             {
                 textBox1.Text = "0";
             }
-            else if(texr == "back" && textBox1.Text.Length > 1)
+            else if (texr == "back" && textBox1.Text.Length > 1)
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
@@ -87,7 +87,7 @@ namespace Calculator
             for (int i = 0; i < len; i++)
             {
                 int a = (int)eval[i];
-                if((a >= 40 && a < 44) || (a > 44 && a <= 57))
+                if ((a >= 40 && a < 44) || (a > 44 && a <= 57))
                 {
                     // valid
                 }
@@ -100,6 +100,7 @@ namespace Calculator
             }
         }
 
+        // keyinput method
         private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
         {
             if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
