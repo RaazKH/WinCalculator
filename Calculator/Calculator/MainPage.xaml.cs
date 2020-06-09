@@ -21,9 +21,6 @@ using Windows.Devices.AllJoyn;
 
 namespace Calculator
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         bool resultDisplayed = false;
@@ -42,6 +39,11 @@ namespace Calculator
          
         private void button_click(object sender, RoutedEventArgs e)
         {
+            if (resultDisplayed == true)
+            {
+                return;
+            }
+
             Button clickedButton = (sender as Button);
             var texr = clickedButton.Tag.ToString();
 
@@ -59,7 +61,7 @@ namespace Calculator
         private void button_special(object sender, RoutedEventArgs e)
         {
             string texr = (sender as Button).Tag.ToString();
-            if (texr == "clear")
+            if (texr == "clear" || resultDisplayed == true)
             {
                 textBox1.Text = "0";
             }
@@ -67,15 +69,22 @@ namespace Calculator
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
-            else if (texr == "back" && textBox1.Text.Length == 1)
+            else if (texr == "back" && textBox1.Text.Length == 1 || resultDisplayed == true)
             {
                 textBox1.Text = "0";
             }
+
+            resultDisplayed = false;
         }
 
         // when the calculation needs to be made
         private void button_evaluate (object sender, RoutedEventArgs e)
         {
+            if(resultDisplayed == true)
+            {
+                return;
+            }
+
             string eval = textBox1.Text;
             int len = eval.Length;
             string temp = "";
@@ -104,7 +113,37 @@ namespace Calculator
                 Debug.WriteLine(operation.Length);
             }
 
-            //evaluate
+            // evaluate
+            double num = Convert.ToDouble(operation[0]);
+            for (int i = 0; i < operation.Length; i++)
+            {
+                if (operation[i] == null)
+                    break;
+
+                if (i % 2 != 0)
+                {
+                    if (operation[i] == "+")
+                    {
+                        num += Convert.ToDouble(operation[i + 1]);
+                    }
+                    else if (operation[i] == "*")
+                    {
+                        num *= Convert.ToDouble(operation[i + 1]);
+                    }
+                    else if (operation[i] == "/")
+                    {
+                        num /= Convert.ToDouble(operation[i + 1]);
+                    }
+                    else if (operation[i] == "-")
+                    {
+                        num -= Convert.ToDouble(operation[i + 1]);
+                    }
+                }
+            }
+
+
+            textBox1.Text += " = " + num;
+            resultDisplayed = true;
 
             // print result
 
@@ -234,7 +273,7 @@ namespace Calculator
             {
                 button_click(bdivided, e);
             }
-            else if (e.Key == VirtualKey.Decimal)
+            else if (e.Key == VirtualKey.Decimal || (int)e.Key == 190)
             {
                 button_click(bdecimal, e);
             }
@@ -246,7 +285,7 @@ namespace Calculator
             {
                 button_special(bclear, e);
             }
-            else if (e.Key == VirtualKey.Enter || (int)e.Key == 187)
+            else if (e.Key == VirtualKey.Enter || (int)e.Key == 187) // DOESNT WORK!!!!!!!!!!!!!!!!!!!!!!!!!!
             {
                 button_evaluate(bequals, e);
             }
