@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 using System.Diagnostics;
 using Windows.System;
+using Windows.Security.Cryptography.Certificates;
+using Windows.UI.Core;
 
 namespace Calculator
 {
@@ -28,13 +30,14 @@ namespace Calculator
             this.InitializeComponent();
 
             // need this too for some reason
-            this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+            //this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
 
             // initializes keyboard input on app startup
             // without this a button will need to be hit on the screen before keyboard works
-            this.Loaded += delegate { this.Focus(FocusState.Keyboard); };
+            //this.Loaded += delegate { this.Focus(FocusState.Keyboard); };
+            
         }
-
+         
         private void button_click(object sender, RoutedEventArgs e)
         {
             Button clickedButton = (sender as Button);
@@ -103,11 +106,30 @@ namespace Calculator
         // keyinput method
         private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
         {
-            if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
+            // Handle shift + 8 for * and shift + 187 for +
+            var shiftState = CoreWindow.GetForCurrentThread().GetKeyState(VirtualKey.Shift);
+            if ((shiftState & CoreVirtualKeyStates.Down) == CoreVirtualKeyStates.Down)
+            {
+                if (e.Key == VirtualKey.Number8)
+                {
+                    button_click(btimes, e);
+                }
+                else if ((int)e.Key == 187)
+                {
+                    button_click(bplus, e);
+                }
+                else
+                {
+                    Debug.WriteLine("Not mapped, keycode = Shift + " + e.Key);
+                }
+            }
+
+            // The remaining keys will only work if shift is not being held
+            else if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
             {
                 button_click(b1, e);
             }
-            else if(e.Key == VirtualKey.Number2 || e.Key == VirtualKey.NumberPad2)
+            else if (e.Key == VirtualKey.Number2 || e.Key == VirtualKey.NumberPad2)
             {
                 button_click(b2, e);
             }
@@ -143,8 +165,42 @@ namespace Calculator
             {
                 button_click(b0, e);
             }
-
-
+            else if (e.Key == VirtualKey.Add)
+            {
+                button_click(bplus, e);
+            }
+            else if (e.Key == VirtualKey.Subtract || (int)e.Key == 189)
+            {
+                button_click(bminus, e);
+            }
+            else if (e.Key == VirtualKey.Multiply)
+            {
+                button_click(btimes, e);
+            }
+            else if (e.Key == VirtualKey.Divide || (int)e.Key == 191)
+            {
+                button_click(bdivided, e);
+            }
+            else if (e.Key == VirtualKey.Decimal)
+            {
+                button_click(bdecimal, e);
+            }
+            else if (e.Key == VirtualKey.Back)
+            {
+                button_special(bbackspace, e);
+            }
+            else if (e.Key == VirtualKey.Delete)
+            {
+                button_special(bclear, e);
+            }
+            else if (e.Key == VirtualKey.Enter || (int)e.Key == 187)
+            {
+                button_evaluate(bequals, e);
+            }
+            else
+            {
+                Debug.WriteLine("Not mapped, keycode = " + e.Key);
+            }
         }
     }
 }
