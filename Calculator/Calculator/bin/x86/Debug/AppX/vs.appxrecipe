@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>09c73f23-e985-4c96-9d37-00667cdff526</PackageIdentityName>
-    <PackageIdentityPublisher>CN=serxt</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Raaz</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>3939D34026580C1F9DE25B4AAFD99E73E1C505A3D939F92829F65BA1DCD25184</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>09c73f23-e985-4c96-9d37-00667cdff526_1.0.0.0_x86__h5rg5txba53j2</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>09c73f23-e985-4c96-9d37-00667cdff526_h5rg5txba53j2!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>2B0841A1D5931A72265A8DCEDF2654956C9EF1131436379223419F382496834A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>09c73f23-e985-4c96-9d37-00667cdff526_1.0.0.0_x86__y9hq817x59v5y</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>09c73f23-e985-4c96-9d37-00667cdff526_y9hq817x59v5y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>09c73f23-e985-4c96-9d37-00667cdff526</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=serxt</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=Raaz</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-09T22:32:17.765</Modified>
+      <Modified>2020-06-09T22:51:36.900</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2020-06-09T22:32:17.309</Modified>
+      <Modified>2020-06-09T22:51:35.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,9 +46,230 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-19T00:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-06-04T20:19:04.368</Modified>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.529</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.588</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.635</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.110</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.121</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.158</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.172</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.185</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.204</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.298</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.001</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.011</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.922</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.949</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.814</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.833</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.858</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.868</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.876</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.914</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.885</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.893</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.583</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.594</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:06.609</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.354</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-06-09T22:51:05.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -57,32 +278,31 @@
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
+      <Modified>2020-06-09T22:51:06.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
+      <Modified>2020-06-09T22:51:05.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
+      <Modified>2020-06-09T22:51:05.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
+      <Modified>2020-06-09T22:51:05.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-04T01:29:52.609</Modified>
+      <Modified>2020-06-09T22:51:05.416</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2020-06-04T20:19:04.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
@@ -94,7 +314,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-06-09T22:32:17.139</Modified>
+      <Modified>2020-06-09T22:51:35.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +322,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-06-08T00:07:57.533</Modified>
+      <Modified>2020-06-09T22:51:36.055</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2020-06-09T22:32:17.759</Modified>
+      <Modified>2020-06-09T22:51:36.886</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

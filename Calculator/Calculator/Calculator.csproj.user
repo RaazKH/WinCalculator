@@ -3,4 +3,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <UseSimulator>false</UseSimulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\serxt\Desktop\WinCalculator\logov1.png</Source>
+    <SmallTileSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</SmallTileSource>
+    <MediumTileSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</MediumTileSource>
+    <WideTileSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</WideTileSource>
+    <LargeTileSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</LargeTileSource>
+    <AppIconSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</AppIconSource>
+    <SplashScreenSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\serxt\Desktop\WinCalculator\logov1.png</PackageLogoSource>
+  </PropertyGroup>
 </Project>
