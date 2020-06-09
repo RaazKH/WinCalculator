@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Windows.System;
 using Windows.Security.Cryptography.Certificates;
 using Windows.UI.Core;
+using Windows.Devices.AllJoyn;
 
 namespace Calculator
 {
@@ -25,6 +26,7 @@ namespace Calculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        bool resultDisplayed = false;
         public MainPage()
         {
             this.InitializeComponent();
@@ -53,6 +55,7 @@ namespace Calculator
             }
         }
 
+        // when backspace or clear are used
         private void button_special(object sender, RoutedEventArgs e)
         {
             string texr = (sender as Button).Tag.ToString();
@@ -70,10 +73,59 @@ namespace Calculator
             }
         }
 
+        // when the calculation needs to be made
         private void button_evaluate (object sender, RoutedEventArgs e)
         {
             string eval = textBox1.Text;
             int len = eval.Length;
+            string temp = "";
+            string[] operation = new string[len];
+            int pos = 0;
+            foreach (char a in eval)
+            {
+                if (a == '/' || a == '*' || a == '+' || a == '-') // add ()
+                {
+                    operation[pos] = temp;
+                    
+                    operation[pos + 1] = ""+a;
+
+                    pos = pos + 2;
+                    temp = "";
+                }
+                else
+                {
+                    temp += a;
+                }
+            }
+            operation[pos] = temp;
+
+            foreach (string a in operation)
+            {
+                Debug.WriteLine(operation.Length);
+            }
+
+            //evaluate
+
+            // print result
+
+
+            /**
+            for (int i = 0; i < len; i++)
+            {
+                char a = eval[i];
+                if (a == '/' || a == '*' || a == '+' || a == '-')
+                {
+                    // store temp in the string array and store the operator in the next position
+                    // increment array pos by 2
+                }
+
+            }**/
+
+
+
+
+
+
             // check for valid characters
             // 40 = (
             // 41 = )
@@ -86,7 +138,7 @@ namespace Calculator
             // 48-57 = 0-9 
             // 120 = x
             // 247 = ÷
-
+            /**
             for (int i = 0; i < len; i++)
             {
                 int a = (int)eval[i];
@@ -101,6 +153,7 @@ namespace Calculator
                 }
                 
             }
+            **/
         }
 
         // keyinput method
