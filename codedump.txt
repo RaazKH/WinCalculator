@@ -1,0 +1,87 @@
+ // print result
+
+
+            /**
+            for (int i = 0; i < len; i++)
+            {
+                char a = eval[i];
+                if (a == '/' || a == '*' || a == '+' || a == '-')
+                {
+                    // store temp in the string array and store the operator in the next position
+                    // increment array pos by 2
+                }
+
+            }**/
+
+
+
+
+
+
+            // check for valid characters
+            // 40 = (
+            // 41 = )
+            // 42 = *
+            // 43 = +
+            // 44 = , IGNORE
+            // 45 = -
+            // 46 = .
+            // 47 = /
+            // 48-57 = 0-9 
+            // 120 = x
+            // 247 = ÷
+            /**
+            for (int i = 0; i < len; i++)
+            {
+                int a = (int)eval[i];
+                if ((a >= 40 && a < 44) || (a > 44 && a <= 57))
+                {
+                    // valid
+                }
+                else
+                {
+                    Debug.WriteLine("Invalid character:" + a);
+                    return;
+                }
+                
+            }
+            **/
+
+
+
+
+
+
+
+
+            // need this too for some reason
+            //this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
+
+            // initializes keyboard input on app startup
+            // without this a button will need to be hit on the screen before keyboard works
+            //this.Loaded += delegate { this.Focus(FocusState.Keyboard); };
+
+
+
+
+
+
+12.1 + (4 - 3) * 32.5 - (55 * 6) + 6
+
+12.1
+(4 - 3)
+*
+32.5
+-
+(55*6)
++
+6
+
+((
+
+
+Eval object
+string e(contains string)
+object.balanced() boolean
+object.decimals() boolean
+object.isvalid

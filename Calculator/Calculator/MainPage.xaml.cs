@@ -18,30 +18,30 @@ using Windows.System;
 using Windows.Security.Cryptography.Certificates;
 using Windows.UI.Core;
 using Windows.Devices.AllJoyn;
+using Windows.Devices.Bluetooth.GenericAttributeProfile;
+using System.Linq.Expressions;
+using System.Data;
 
 namespace Calculator
 {
     public sealed partial class MainPage : Page
     {
         bool resultDisplayed = false;
+        int openPCount = 0;
+        int closedPCount = 0;
+        int resultLen = 0;
         public MainPage()
         {
             this.InitializeComponent();
-
-            // need this too for some reason
-            //this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
-
-            // initializes keyboard input on app startup
-            // without this a button will need to be hit on the screen before keyboard works
-            //this.Loaded += delegate { this.Focus(FocusState.Keyboard); };
-            
         }
          
+        // when a number or decimal is entered
         private void button_click(object sender, RoutedEventArgs e)
         {
             if (resultDisplayed == true)
             {
-                return;
+                button_special(bclear, e);
+                resultDisplayed = false;
             }
 
             Button clickedButton = (sender as Button);
@@ -53,6 +53,68 @@ namespace Calculator
             }
             else
             {
+                if (textBox1.Text[textBox1.Text.Length - 1] == ')')
+                {
+                    textBox1.Text = textBox1.Text + "*" + texr;
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text + texr;
+                }
+            }
+        }
+
+        // when an operation is sent
+        private void button_symbol(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = (sender as Button);
+            var texr = clickedButton.Tag.ToString();
+            var text = textBox1.Text;
+            var len = text.Length;
+
+            if (resultDisplayed == true)
+            {
+                if (texr != "(")
+                {
+                    return;
+                }
+                button_special(bclear, e);
+                resultDisplayed = false;
+            }
+
+            if (text == "0" && (texr == "(" || texr == "-"))
+            {
+                textBox1.Text = texr;
+                if (texr == "(")
+                    openPCount++;
+            }
+            else if (texr == "(")
+            {
+                if (text[len - 1] != '+' && text[len - 1] != '*' && text[len - 1] != '-' && text[len - 1] != '/' && text[len - 1] != '(')
+                {
+                    textBox1.Text = textBox1.Text + "*" + texr;
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text + texr;
+                }
+                //Debug.WriteLine();
+                openPCount++;
+            }
+            else if (texr == ")")
+            {
+                if (text[len - 1] == '(')
+                {
+                    textBox1.Text = textBox1.Text + "0" + texr;
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text + texr;
+                }
+                closedPCount++;
+            }
+            else
+            {
                 textBox1.Text = textBox1.Text + texr;
             }
         }
@@ -61,38 +123,80 @@ namespace Calculator
         private void button_special(object sender, RoutedEventArgs e)
         {
             string texr = (sender as Button).Tag.ToString();
-            if (texr == "clear" || resultDisplayed == true)
+            if (texr == "clear")
             {
+                openPCount = 0;
+                closedPCount = 0;
+
                 textBox1.Text = "0";
+            }
+            else if (texr == "back" && resultDisplayed == true)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - resultLen);
             }
             else if (texr == "back" && textBox1.Text.Length > 1)
             {
+                if(textBox1.Text[textBox1.Text.Length-1] == '(')
+                {
+                    openPCount--;
+                }
+                else if (textBox1.Text[textBox1.Text.Length - 1] == ')')
+                {
+                    closedPCount--;
+                }
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
-            else if (texr == "back" && textBox1.Text.Length == 1 || resultDisplayed == true)
+            else if (texr == "back" && textBox1.Text.Length == 1)
             {
+                if (textBox1.Text[0] == '(')
+                {
+                    openPCount = 0;
+                }
                 textBox1.Text = "0";
             }
-
             resultDisplayed = false;
         }
 
         // when the calculation needs to be made
         private void button_evaluate (object sender, RoutedEventArgs e)
         {
-            if(resultDisplayed == true)
+
+            if (resultDisplayed == true)
             {
                 return;
             }
 
+            if (closedPCount != openPCount)
+            {
+                return;
+            }
+
+            // Step 2: Split and store
             string eval = textBox1.Text;
-            int len = eval.Length;
-            string temp = "";
-            string[] operation = new string[len];
-            int pos = 0;
+            //string temp = "";
+            //List<string> operation = new List<string>();
+            //int pos = 0;
+
+
+
+            // validate the expression 
+            // - Are the () balanced
+            // - Are the operators entered correctly
+            // - Are there too many . in a number
+
+
+            /**
+           
             foreach (char a in eval)
             {
-                if (a == '/' || a == '*' || a == '+' || a == '-') // add ()
+                if(a == '(')
+                {
+                    if (temp.Length > 0)
+                    {
+                        // insert multiplication
+                    }
+                }
+                else if (a == '/' || a == '*' || a == '+' || a == '-') // add ()
                 {
                     operation[pos] = temp;
                     
@@ -106,16 +210,19 @@ namespace Calculator
                     temp += a;
                 }
             }
+            // check if temp length is > 0?
             operation[pos] = temp;
 
+            // Step 1.1: Debug step
             foreach (string a in operation)
             {
-                Debug.WriteLine(operation.Length);
+                Debug.WriteLine(a);
             }
 
-            // evaluate
+
+            // Step 2: Validate
             double num = Convert.ToDouble(operation[0]);
-            for (int i = 0; i < operation.Length; i++)
+            for (int i = 0; i < operation.Count; i++)
             {
                 if (operation[i] == null)
                     break;
@@ -140,59 +247,17 @@ namespace Calculator
                     }
                 }
             }
+             **/
+            // Step 3: Calculate
+            DataTable dt = new DataTable();
 
 
-            textBox1.Text += " = " + num;
+   
+            // Step 4: Display
+            string result = " = " + dt.Compute(eval, "");
+            resultLen = result.Length;
+            textBox1.Text += result;
             resultDisplayed = true;
-
-            // print result
-
-
-            /**
-            for (int i = 0; i < len; i++)
-            {
-                char a = eval[i];
-                if (a == '/' || a == '*' || a == '+' || a == '-')
-                {
-                    // store temp in the string array and store the operator in the next position
-                    // increment array pos by 2
-                }
-
-            }**/
-
-
-
-
-
-
-            // check for valid characters
-            // 40 = (
-            // 41 = )
-            // 42 = *
-            // 43 = +
-            // 44 = , IGNORE
-            // 45 = -
-            // 46 = .
-            // 47 = /
-            // 48-57 = 0-9 
-            // 120 = x
-            // 247 = ÷
-            /**
-            for (int i = 0; i < len; i++)
-            {
-                int a = (int)eval[i];
-                if ((a >= 40 && a < 44) || (a > 44 && a <= 57))
-                {
-                    // valid
-                }
-                else
-                {
-                    Debug.WriteLine("Invalid character:" + a);
-                    return;
-                }
-                
-            }
-            **/
         }
 
         // keyinput method
@@ -204,13 +269,21 @@ namespace Calculator
             {
                 if (e.Key == VirtualKey.Number8)
                 {
-                    button_click(btimes, e);
+                    button_symbol(btimes, e);
                 }
                 else if ((int)e.Key == 187)
                 {
-                    button_click(bplus, e);
+                    button_symbol(bplus, e);
                 }
-                else
+                else if (e.Key == VirtualKey.Number9)
+                {
+                    button_symbol(bopenP, e);
+                }
+                else if (e.Key == VirtualKey.Number0)
+                {
+                    button_symbol(bcloseP, e);
+                }
+                else if (e.Key != VirtualKey.Shift)
                 {
                     Debug.WriteLine("Not mapped, keycode = Shift + " + e.Key);
                 }
@@ -259,19 +332,19 @@ namespace Calculator
             }
             else if (e.Key == VirtualKey.Add)
             {
-                button_click(bplus, e);
+                button_symbol(bplus, e);
             }
             else if (e.Key == VirtualKey.Subtract || (int)e.Key == 189)
             {
-                button_click(bminus, e);
+                button_symbol(bminus, e);
             }
             else if (e.Key == VirtualKey.Multiply)
             {
-                button_click(btimes, e);
+                button_symbol(btimes, e);
             }
             else if (e.Key == VirtualKey.Divide || (int)e.Key == 191)
             {
-                button_click(bdivided, e);
+                button_symbol(bdivided, e);
             }
             else if (e.Key == VirtualKey.Decimal || (int)e.Key == 190)
             {
