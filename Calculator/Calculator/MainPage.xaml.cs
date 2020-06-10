@@ -37,7 +37,7 @@ namespace Calculator
         public MainPage()
         {
             this.InitializeComponent();
-            Window.Current.CoreWindow.CharacterReceived += CoreWindow_CharacterReceived;
+            Window.Current.CoreWindow.CharacterReceived += KeyPressed;
         }
          
         // when a number or decimal is entered
@@ -216,101 +216,10 @@ namespace Calculator
             }
         }
 
-        // keyinput method
+        // keyinput method (not used)
         private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
         {
-            // Handle shift + 8 for * and shift + 187 for +
-            var shiftState = CoreWindow.GetForCurrentThread().GetKeyState(VirtualKey.Shift);
-            if ((shiftState & CoreVirtualKeyStates.Down) == CoreVirtualKeyStates.Down)
-            {
-                if (e.Key == VirtualKey.Number8)
-                {
-                    Button_Symbol(btimes, e);
-                }
-                else if ((int)e.Key == 187)
-                {
-                    Button_Symbol(bplus, e);
-                }
-                else if (e.Key == VirtualKey.Number9)
-                {
-                    Button_Symbol(bopenP, e);
-                }
-                else if (e.Key == VirtualKey.Number0)
-                {
-                    Button_Symbol(bcloseP, e);
-                }
-                else if (e.Key != VirtualKey.Shift)
-                {
-                    Debug.WriteLine("Not mapped, keycode = Shift + " + e.Key);
-                }
-            }
-
-            // The remaining keys will only work if shift is not being held
-            else if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
-            {
-                Button_Click(b1, e);
-            }
-            else if (e.Key == VirtualKey.Number2 || e.Key == VirtualKey.NumberPad2)
-            {
-                Button_Click(b2, e);
-            }
-            else if (e.Key == VirtualKey.Number3 || e.Key == VirtualKey.NumberPad3)
-            {
-                Button_Click(b3, e);
-            }
-            else if (e.Key == VirtualKey.Number4 || e.Key == VirtualKey.NumberPad4)
-            {
-                Button_Click(b4, e);
-            }
-            else if (e.Key == VirtualKey.Number5 || e.Key == VirtualKey.NumberPad5)
-            {
-                Button_Click(b5, e);
-            }
-            else if (e.Key == VirtualKey.Number6 || e.Key == VirtualKey.NumberPad6)
-            {
-                Button_Click(b6, e);
-            }
-            else if (e.Key == VirtualKey.Number7 || e.Key == VirtualKey.NumberPad7)
-            {
-                Button_Click(b7, e);
-            }
-            else if (e.Key == VirtualKey.Number8 || e.Key == VirtualKey.NumberPad8)
-            {
-                Button_Click(b8, e);
-            }
-            else if (e.Key == VirtualKey.Number9 || e.Key == VirtualKey.NumberPad9)
-            {
-                Button_Click(b9, e);
-            }
-            else if (e.Key == VirtualKey.Number0 || e.Key == VirtualKey.NumberPad0)
-            {
-                Button_Click(b0, e);
-            }
-            else if (e.Key == VirtualKey.Add)
-            {
-                Button_Symbol(bplus, e);
-            }
-            else if (e.Key == VirtualKey.Subtract || (int)e.Key == 189)
-            {
-                Button_Symbol(bminus, e);
-            }
-            else if (e.Key == VirtualKey.Multiply)
-            {
-                Button_Symbol(btimes, e);
-            }
-            else if (e.Key == VirtualKey.Divide || (int)e.Key == 191)
-            {
-                Button_Symbol(bdivided, e);
-            }
-            else if (e.Key == VirtualKey.Decimal || (int)e.Key == 190)
-            {
-                Button_Click(bdecimal, e);
-            }
-            else if (e.Key == VirtualKey.Back)
-            {
-                Button_Special(bbackspace, e);
-            }
-            else if (e.Key == VirtualKey.Delete)
+            if (e.Key == VirtualKey.Delete)
             {
                 Button_Special(bclear, e);
             }
@@ -320,12 +229,88 @@ namespace Calculator
             }
         }
 
-        private void CoreWindow_CharacterReceived(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs args)
+        private void KeyPressed(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs key)
         {
             RoutedEventArgs e = new RoutedEventArgs();
-            if (args.KeyCode == 13) //Enter
+            if (key.KeyCode == 8) // Backspace
+            {
+                Button_Special(bbackspace, e);
+            }
+            else if (key.KeyCode == 13) // Enter
             {
                 Button_Evaluate(bequals, e);
+            }
+            else if (key.KeyCode == 40) // (
+            {
+                Button_Symbol(bopenP, e);
+            }
+            else if (key.KeyCode == 41) // )
+            {
+                Button_Symbol(bcloseP, e);
+            }
+            else if (key.KeyCode == 42) // *
+            {
+                Button_Symbol(btimes, e);
+            }
+            else if (key.KeyCode == 43) // +
+            {
+                Button_Symbol(bplus, e);
+            }
+            else if (key.KeyCode == 45) // -
+            {
+                Button_Symbol(bminus, e);
+            }
+            else if (key.KeyCode == 46) // .
+            {
+                Button_Click(bdecimal, e);
+            }
+            else if (key.KeyCode == 47) // /
+            {
+                Button_Evaluate(bdivided, e);
+            }
+            else if (key.KeyCode == 48) // 0
+            {
+                Button_Click(b0, e);
+            }
+            else if (key.KeyCode == 49) // 1
+            {
+                Button_Click(b1, e);
+            }
+            else if (key.KeyCode == 50) // 2
+            {
+                Button_Click(b2, e);
+            }
+            else if (key.KeyCode == 51) // 3
+            {
+                Button_Click(b3, e);
+            }
+            else if (key.KeyCode == 52) // 4
+            {
+                Button_Click(b4, e);
+            }
+            else if (key.KeyCode == 53) // 5
+            {
+                Button_Click(b5, e);
+            }
+            else if (key.KeyCode == 54) // 6
+            {
+                Button_Click(b6, e);
+            }
+            else if (key.KeyCode == 55) // 7
+            {
+                Button_Click(b7, e);
+            }
+            else if (key.KeyCode == 56) // 8
+            {
+                Button_Click(b8, e);
+            }
+            else if (key.KeyCode == 57) // 9
+            {
+                Button_Click(b9, e);
+            }
+            else
+            {
+                Debug.WriteLine("Not mapped, keycode = " + key.KeyCode);
             }
         }
     }
