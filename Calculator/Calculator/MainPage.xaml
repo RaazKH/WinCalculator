@@ -10,7 +10,8 @@
     <!--
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
 
-    <Grid KeyDown="Grid_KeyPressed">
+    <Grid KeyDown="Grid_KeyPressed"
+          x:Name="MyGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -39,7 +40,7 @@
         <Button 
             x:Name="b0"
             Content="0"
-            Click="button_click"
+            Click="Button_Click"
             Tag="0"
             FontSize="25"
             ToolTipService.ToolTip="Shortcut key: 0"
@@ -55,7 +56,7 @@
         <Button 
             x:Name="b1"
             Content="1"
-            Click="button_click"
+            Click="Button_Click"
             Tag="1"
             FontSize="25"
             
@@ -70,7 +71,7 @@
         <Button 
             x:Name="b2"
             Content="2"
-            Click="button_click"
+            Click="Button_Click"
             Tag="2"
             FontSize="25"
             
@@ -85,7 +86,7 @@
         <Button 
             x:Name="b3"
             Content="3"
-            Click="button_click"
+            Click="Button_Click"
             Tag="3"
             FontSize="25"
             
@@ -100,7 +101,7 @@
         <Button 
             x:Name="b4"
             Content="4"
-            Click="button_click"
+            Click="Button_Click"
             Tag="4"
             FontSize="25"
             
@@ -115,7 +116,7 @@
         <Button 
             x:Name="b5"
             Content="5"
-            Click="button_click"
+            Click="Button_Click"
             Tag="5"
             FontSize="25"
             
@@ -130,7 +131,7 @@
         <Button 
             x:Name="b6"
             Content="6"
-            Click="button_click"
+            Click="Button_Click"
             Tag="6"
             FontSize="25"
             
@@ -145,7 +146,7 @@
         <Button 
             x:Name="b7"
             Content="7"
-            Click="button_click"
+            Click="Button_Click"
             Tag="7"
             FontSize="25"
             
@@ -160,7 +161,7 @@
         <Button 
             x:Name="b8"
             Content="8"
-            Click="button_click"
+            Click="Button_Click"
             Tag="8"
             FontSize="25"
             
@@ -175,7 +176,7 @@
         <Button 
             x:Name="b9"
             Content="9"
-            Click="button_click"
+            Click="Button_Click"
             Tag="9"
             FontSize="25"
             
@@ -190,7 +191,7 @@
         <Button 
             x:Name="bclear"
             Content="Clear"
-            Click="button_special"
+            Click="Button_Special"
             Tag="clear"
             
             Grid.Row="6"
@@ -204,7 +205,7 @@
         <Button 
             x:Name="bdecimal"
             Content="."
-            Click="button_click"
+            Click="Button_Click"
             Tag="."
             FontSize="25"
             
@@ -219,7 +220,7 @@
         <Button 
             x:Name="bopenP"
             Content="("
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag="("
             FontSize="25"
             
@@ -234,7 +235,7 @@
         <Button 
             x:Name="bcloseP"
             Content=")"
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag=")"
             FontSize="25"
             
@@ -249,7 +250,7 @@
         <Button 
             x:Name="bbackspace"
             Content="DEL"
-            Click="button_special"
+            Click="Button_Special"
             Tag="back"
             
             Grid.Row="1" 
@@ -263,7 +264,7 @@
         <Button 
             x:Name="bplus"
             Content="+"
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag="+"
             FontSize="25"
             
@@ -278,7 +279,7 @@
         <Button 
             x:Name="bminus"
             Content="-"
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag="-"
             FontSize="25"
             
@@ -293,7 +294,7 @@
         <Button 
             x:Name="btimes"
             Content="x"
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag="*"
             FontSize="25"
             
@@ -308,7 +309,7 @@
         <Button 
             x:Name="bdivided"
             Content="÷"
-            Click="button_symbol"
+            Click="Button_Symbol"
             Tag="/"
             FontSize="25"
             
@@ -323,7 +324,7 @@
         <Button 
             x:Name="bequals"
             Content="="
-            Click="button_evaluate"
+            Click="Button_Evaluate"
             FontSize="25"
             
             Grid.Row="5" 

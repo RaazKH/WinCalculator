@@ -27,6 +27,7 @@ namespace Calculator
     public sealed partial class MainPage : Page
     {
         bool resultDisplayed = false;
+        bool displayedDecimal = false;
         int openPCount = 0;
         int closedPCount = 0;
         int resultLen = 0;
@@ -36,11 +37,11 @@ namespace Calculator
         }
          
         // when a number or decimal is entered
-        private void button_click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (resultDisplayed == true)
             {
-                button_special(bclear, e);
+                Button_Special(bclear, e);
                 resultDisplayed = false;
             }
 
@@ -55,22 +56,35 @@ namespace Calculator
             {
                 if (textBox1.Text[textBox1.Text.Length - 1] == ')')
                 {
-                    textBox1.Text = textBox1.Text + "*" + texr;
+                    textBox1.Text += "*" + texr;
+                }
+                else if (texr == ".")
+                {
+                    if(displayedDecimal == false)
+                    {
+                        textBox1.Text += texr;
+                        displayedDecimal = true;
+                    }
                 }
                 else
                 {
-                    textBox1.Text = textBox1.Text + texr;
+                    textBox1.Text += texr;
                 }
             }
         }
 
         // when an operation is sent
-        private void button_symbol(object sender, RoutedEventArgs e)
+        private void Button_Symbol(object sender, RoutedEventArgs e)
         {
             Button clickedButton = (sender as Button);
             var texr = clickedButton.Tag.ToString();
             var text = textBox1.Text;
             var len = text.Length;
+
+            if (text[len-1] == '.')
+            {
+                return;
+            }
 
             if (resultDisplayed == true)
             {
@@ -78,7 +92,7 @@ namespace Calculator
                 {
                     return;
                 }
-                button_special(bclear, e);
+                Button_Special(bclear, e);
                 resultDisplayed = false;
             }
 
@@ -96,7 +110,7 @@ namespace Calculator
                 }
                 else
                 {
-                    textBox1.Text = textBox1.Text + texr;
+                    textBox1.Text += texr;
                 }
                 //Debug.WriteLine();
                 openPCount++;
@@ -109,25 +123,27 @@ namespace Calculator
                 }
                 else
                 {
-                    textBox1.Text = textBox1.Text + texr;
+                    textBox1.Text += texr;
                 }
                 closedPCount++;
             }
             else
             {
-                textBox1.Text = textBox1.Text + texr;
+                textBox1.Text += texr;
             }
+
+            displayedDecimal = false;
         }
 
         // when backspace or clear are used
-        private void button_special(object sender, RoutedEventArgs e)
+        private void Button_Special(object sender, RoutedEventArgs e)
         {
             string texr = (sender as Button).Tag.ToString();
             if (texr == "clear")
             {
                 openPCount = 0;
                 closedPCount = 0;
-
+                displayedDecimal = false;
                 textBox1.Text = "0";
             }
             else if (texr == "back" && resultDisplayed == true)
@@ -144,6 +160,10 @@ namespace Calculator
                 {
                     closedPCount--;
                 }
+                else if (textBox1.Text[textBox1.Text.Length - 1] == '.')
+                {
+                    displayedDecimal = false; ;
+                }
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
             else if (texr == "back" && textBox1.Text.Length == 1)
@@ -152,110 +172,33 @@ namespace Calculator
                 {
                     openPCount = 0;
                 }
+                else if (textBox1.Text[0] == '.')
+                {
+                    displayedDecimal = false; ;
+                }
                 textBox1.Text = "0";
             }
             resultDisplayed = false;
         }
 
         // when the calculation needs to be made
-        private void button_evaluate (object sender, RoutedEventArgs e)
+        private void Button_Evaluate (object sender, RoutedEventArgs e)
         {
-
             if (resultDisplayed == true)
             {
                 return;
             }
-
             if (closedPCount != openPCount)
             {
                 return;
             }
 
-            // Step 2: Split and store
             string eval = textBox1.Text;
-            //string temp = "";
-            //List<string> operation = new List<string>();
-            //int pos = 0;
-
-
-
-            // validate the expression 
-            // - Are the () balanced
-            // - Are the operators entered correctly
-            // - Are there too many . in a number
-
-
-            /**
-           
-            foreach (char a in eval)
-            {
-                if(a == '(')
-                {
-                    if (temp.Length > 0)
-                    {
-                        // insert multiplication
-                    }
-                }
-                else if (a == '/' || a == '*' || a == '+' || a == '-') // add ()
-                {
-                    operation[pos] = temp;
-                    
-                    operation[pos + 1] = ""+a;
-
-                    pos = pos + 2;
-                    temp = "";
-                }
-                else
-                {
-                    temp += a;
-                }
-            }
-            // check if temp length is > 0?
-            operation[pos] = temp;
-
-            // Step 1.1: Debug step
-            foreach (string a in operation)
-            {
-                Debug.WriteLine(a);
-            }
-
-
-            // Step 2: Validate
-            double num = Convert.ToDouble(operation[0]);
-            for (int i = 0; i < operation.Count; i++)
-            {
-                if (operation[i] == null)
-                    break;
-
-                if (i % 2 != 0)
-                {
-                    if (operation[i] == "+")
-                    {
-                        num += Convert.ToDouble(operation[i + 1]);
-                    }
-                    else if (operation[i] == "*")
-                    {
-                        num *= Convert.ToDouble(operation[i + 1]);
-                    }
-                    else if (operation[i] == "/")
-                    {
-                        num /= Convert.ToDouble(operation[i + 1]);
-                    }
-                    else if (operation[i] == "-")
-                    {
-                        num -= Convert.ToDouble(operation[i + 1]);
-                    }
-                }
-            }
-             **/
-            // Step 3: Calculate
             DataTable dt = new DataTable();
-
-
-   
-            // Step 4: Display
             string result = " = " + dt.Compute(eval, "");
             resultLen = result.Length;
+
+            // Display
             textBox1.Text += result;
             resultDisplayed = true;
         }
@@ -269,19 +212,19 @@ namespace Calculator
             {
                 if (e.Key == VirtualKey.Number8)
                 {
-                    button_symbol(btimes, e);
+                    Button_Symbol(btimes, e);
                 }
                 else if ((int)e.Key == 187)
                 {
-                    button_symbol(bplus, e);
+                    Button_Symbol(bplus, e);
                 }
                 else if (e.Key == VirtualKey.Number9)
                 {
-                    button_symbol(bopenP, e);
+                    Button_Symbol(bopenP, e);
                 }
                 else if (e.Key == VirtualKey.Number0)
                 {
-                    button_symbol(bcloseP, e);
+                    Button_Symbol(bcloseP, e);
                 }
                 else if (e.Key != VirtualKey.Shift)
                 {
@@ -292,75 +235,75 @@ namespace Calculator
             // The remaining keys will only work if shift is not being held
             else if(e.Key == VirtualKey.Number1 || e.Key == VirtualKey.NumberPad1)
             {
-                button_click(b1, e);
+                Button_Click(b1, e);
             }
             else if (e.Key == VirtualKey.Number2 || e.Key == VirtualKey.NumberPad2)
             {
-                button_click(b2, e);
+                Button_Click(b2, e);
             }
             else if (e.Key == VirtualKey.Number3 || e.Key == VirtualKey.NumberPad3)
             {
-                button_click(b3, e);
+                Button_Click(b3, e);
             }
             else if (e.Key == VirtualKey.Number4 || e.Key == VirtualKey.NumberPad4)
             {
-                button_click(b4, e);
+                Button_Click(b4, e);
             }
             else if (e.Key == VirtualKey.Number5 || e.Key == VirtualKey.NumberPad5)
             {
-                button_click(b5, e);
+                Button_Click(b5, e);
             }
             else if (e.Key == VirtualKey.Number6 || e.Key == VirtualKey.NumberPad6)
             {
-                button_click(b6, e);
+                Button_Click(b6, e);
             }
             else if (e.Key == VirtualKey.Number7 || e.Key == VirtualKey.NumberPad7)
             {
-                button_click(b7, e);
+                Button_Click(b7, e);
             }
             else if (e.Key == VirtualKey.Number8 || e.Key == VirtualKey.NumberPad8)
             {
-                button_click(b8, e);
+                Button_Click(b8, e);
             }
             else if (e.Key == VirtualKey.Number9 || e.Key == VirtualKey.NumberPad9)
             {
-                button_click(b9, e);
+                Button_Click(b9, e);
             }
             else if (e.Key == VirtualKey.Number0 || e.Key == VirtualKey.NumberPad0)
             {
-                button_click(b0, e);
+                Button_Click(b0, e);
             }
             else if (e.Key == VirtualKey.Add)
             {
-                button_symbol(bplus, e);
+                Button_Symbol(bplus, e);
             }
             else if (e.Key == VirtualKey.Subtract || (int)e.Key == 189)
             {
-                button_symbol(bminus, e);
+                Button_Symbol(bminus, e);
             }
             else if (e.Key == VirtualKey.Multiply)
             {
-                button_symbol(btimes, e);
+                Button_Symbol(btimes, e);
             }
             else if (e.Key == VirtualKey.Divide || (int)e.Key == 191)
             {
-                button_symbol(bdivided, e);
+                Button_Symbol(bdivided, e);
             }
             else if (e.Key == VirtualKey.Decimal || (int)e.Key == 190)
             {
-                button_click(bdecimal, e);
+                Button_Click(bdecimal, e);
             }
             else if (e.Key == VirtualKey.Back)
             {
-                button_special(bbackspace, e);
+                Button_Special(bbackspace, e);
             }
             else if (e.Key == VirtualKey.Delete)
             {
-                button_special(bclear, e);
+                Button_Special(bclear, e);
             }
             else if (e.Key == VirtualKey.Enter || (int)e.Key == 187) // DOESNT WORK!!!!!!!!!!!!!!!!!!!!!!!!!!
             {
-                button_evaluate(bequals, e);
+                Button_Evaluate(bequals, e);
             }
             else
             {
