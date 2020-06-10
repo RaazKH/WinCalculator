@@ -1,57 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Windows.UI;
 using System.Diagnostics;
 using Windows.System;
-using Windows.Security.Cryptography.Certificates;
-using Windows.UI.Core;
-using Windows.Devices.AllJoyn;
-using Windows.Devices.Bluetooth.GenericAttributeProfile;
-using System.Linq.Expressions;
 using System.Data;
-using Windows.Networking.Sockets;
 
 namespace Calculator
 {
     public sealed partial class MainPage : Page
     {
+        //  result management
         double prevResult = 0;
+        int resultLen = 0;
         bool resultDisplayed = false;
+
+        // input and evaluation control
         bool displayedDecimal = false;
         int openPCount = 0;
         int closedPCount = 0;
-        int resultLen = 0;
         
         public MainPage()
         {
             this.InitializeComponent();
+
+            // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
         }
          
         // when a number or decimal is entered
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // clear result
             if (resultDisplayed == true)
             {
                 Button_Special(bclear, e);
                 resultDisplayed = false;
             }
 
+            // evaluate input before sending to textbox
             Button clickedButton = (sender as Button);
             var texr = clickedButton.Tag.ToString();
-
             if (textBox1.Text == "0" && texr != ".")
             {
                 textBox1.Text = texr;
@@ -121,12 +110,14 @@ namespace Calculator
                 if (text[len - 1] == '(')
                 {
                     textBox1.Text = textBox1.Text + "0" + texr;
+                    closedPCount++;
                 }
-                else
+                else if(closedPCount < openPCount)
                 {
                     textBox1.Text += texr;
+                    closedPCount++;
                 }
-                closedPCount++;
+                
             }
             else
             {
@@ -215,20 +206,8 @@ namespace Calculator
                 Debug.WriteLine("Error with input: " + eval);
             }
         }
-
-        // keyinput method (not used)
-        private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Delete)
-            {
-                Button_Special(bclear, e);
-            }
-            else
-            {
-                // Debug.WriteLine("Not mapped, keycode = " + e.Key);
-            }
-        }
-
+        
+        // keyinput method
         private void KeyPressed(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs key)
         {
             RoutedEventArgs e = new RoutedEventArgs();
@@ -311,6 +290,19 @@ namespace Calculator
             else
             {
                 Debug.WriteLine("Not mapped, keycode = " + key.KeyCode);
+            }
+        }
+
+        // keyinput method (old)
+        private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Delete)
+            {
+                //Button_Special(bclear, e);
+            }
+            else
+            {
+                // Debug.WriteLine("Not mapped, keycode = " + e.Key);
             }
         }
     }
