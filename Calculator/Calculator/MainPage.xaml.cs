@@ -37,7 +37,7 @@ namespace Calculator
         public MainPage()
         {
             this.InitializeComponent();
-            Window.Current.CoreWindow.CharacterReceived += CoreWindow_CharacterReceived; ;
+            Window.Current.CoreWindow.CharacterReceived += CoreWindow_CharacterReceived;
         }
          
         // when a number or decimal is entered
