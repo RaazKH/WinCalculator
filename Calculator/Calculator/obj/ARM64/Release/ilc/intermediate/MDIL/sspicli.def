@@ -1,0 +1,15 @@
+LIBRARY sspicli.dll
+EXPORTS
+   InitializeSecurityContextW
+   ApplyControlToken
+   AcquireCredentialsHandleW
+   EncryptMessage
+   QueryContextAttributesW
+   AcceptSecurityContext
+   EnumerateSecurityPackagesW
+   DecryptMessage
+   LsaGetLogonSessionData
+   FreeCredentialsHandle
+   FreeContextBuffer
+   DeleteSecurityContext
+   LsaFreeReturnBuffer

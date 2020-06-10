@@ -43,3 +43,4 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\Ap
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.build.appxrecipe
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\ForBundle\AppxManifest.xml

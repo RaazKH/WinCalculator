@@ -1,6 +1,2 @@
-MainPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Calculator_1.0.0.0_ARM_Debug.msix
-SymbolPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Debug\Symbols\Calculator_1.0.0.0_ARM_Debug.appxsym
-ResourcePack=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Calculator_1.0.0.0_scale-100.msix
-ResourcePack=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Calculator_1.0.0.0_scale-125.msix
-ResourcePack=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Calculator_1.0.0.0_scale-150.msix
-ResourcePack=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Calculator_1.0.0.0_scale-400.msix
+MainPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Release\Calculator_1.0.1.0_ARM.msix
+SymbolPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\Symbols\Calculator_1.0.1.0_ARM.appxsym

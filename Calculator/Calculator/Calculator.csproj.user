@@ -4,18 +4,30 @@
     <UseSimulator>false</UseSimulator>
   </PropertyGroup>
   <PropertyGroup>
-    <Source>C:\Users\serxt\Desktop\WinCalculator\logov2.png</Source>
-    <SmallTileSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</SmallTileSource>
-    <MediumTileSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</MediumTileSource>
-    <WideTileSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</WideTileSource>
-    <LargeTileSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</LargeTileSource>
-    <AppIconSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</AppIconSource>
-    <SplashScreenSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</SplashScreenSource>
-    <PackageLogoSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</PackageLogoSource>
-    <BadgeLogoSource>C:\Users\serxt\Desktop\WinCalculator\logov2.png</BadgeLogoSource>
-    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <Source>C:\Users\serxt\Desktop\WinCalculator\logov5.png</Source>
+    <SmallTileSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</SmallTileSource>
+    <MediumTileSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</MediumTileSource>
+    <WideTileSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</WideTileSource>
+    <LargeTileSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</LargeTileSource>
+    <AppIconSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</AppIconSource>
+    <SplashScreenSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</PackageLogoSource>
+    <BadgeLogoSource>C:\Users\serxt\Desktop\WinCalculator\logov5.png</BadgeLogoSource>
+    <UapAppxPackageBuildMode>StoreOnly</UapAppxPackageBuildMode>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
-    <PackageOptionalProjectsInIdeBuilds>True</PackageOptionalProjectsInIdeBuilds>
+    <AppxBuildConfigurationSelection>x86|x64|arm|arm64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
+    <UseEmulator>true</UseEmulator>
   </PropertyGroup>
 </Project>

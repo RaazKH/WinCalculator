@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>09c73f23-e985-4c96-9d37-00667cdff526</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Raaz</PackageIdentityPublisher>
+    <PackageIdentityName>5f7545a3-9814-47e9-b1b2-81d741574195</PackageIdentityName>
+    <PackageIdentityPublisher>CN=682A159F-7FB0-46B1-A3BB-CF52959E19A8</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -262,6 +262,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

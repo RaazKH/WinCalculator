@@ -43,3 +43,4 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Debug\qualifi
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Debug\ProjectArchitectures.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Debug\Core\ForBundle\AppxManifest.xml
