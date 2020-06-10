@@ -10,8 +10,7 @@
     <!--
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
 
-    <Grid KeyDown="Grid_KeyPressed"
-          x:Name="MyGrid">
+    <Grid KeyDown="Grid_KeyPressed">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -43,7 +42,6 @@
             Click="Button_Click"
             Tag="0"
             FontSize="25"
-            ToolTipService.ToolTip="Shortcut key: 0"
             
             Grid.Row="5" 
             Grid.Column="1"

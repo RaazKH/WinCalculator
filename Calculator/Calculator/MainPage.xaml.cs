@@ -21,13 +21,13 @@ using Windows.Devices.AllJoyn;
 using Windows.Devices.Bluetooth.GenericAttributeProfile;
 using System.Linq.Expressions;
 using System.Data;
+using Windows.Networking.Sockets;
 
 namespace Calculator
 {
     public sealed partial class MainPage : Page
     {
-        double prevResult = 0; // use for memory
-
+        double prevResult = 0;
         bool resultDisplayed = false;
         bool displayedDecimal = false;
         int openPCount = 0;
@@ -37,6 +37,7 @@ namespace Calculator
         public MainPage()
         {
             this.InitializeComponent();
+            Window.Current.CoreWindow.CharacterReceived += CoreWindow_CharacterReceived; ;
         }
          
         // when a number or decimal is entered
@@ -313,14 +314,21 @@ namespace Calculator
             {
                 Button_Special(bclear, e);
             }
-            else if (e.Key == VirtualKey.Enter || (int)e.Key == 187) // DOESNT WORK!!!!!!!!!!!!!!!!!!!!!!!!!!
-            {
-                Button_Evaluate(bequals, e);
-            }
             else
             {
                 Debug.WriteLine("Not mapped, keycode = " + e.Key);
             }
         }
+
+        private void CoreWindow_CharacterReceived(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs args)
+        {
+            RoutedEventArgs e = new RoutedEventArgs();
+            if (args.KeyCode == 13) //Enter
+            {
+                Button_Evaluate(bequals, e);
+            }
+        }
     }
+
+    
 }

@@ -10,8 +10,7 @@
     <!--
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
 
-    <Grid x:ConnectionId='2'                          
-          x:Name="MyGrid">
+    <Grid x:ConnectionId='2'                          >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -43,7 +42,6 @@
                                 
             Tag="0"
             FontSize="25"
-            ToolTipService.ToolTip="Shortcut key: 0"
             
             Grid.Row="5" 
             Grid.Column="1"
