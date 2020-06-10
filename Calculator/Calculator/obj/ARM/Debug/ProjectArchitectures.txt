@@ -1,0 +1,1 @@
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\Calculator.csproj;arm
