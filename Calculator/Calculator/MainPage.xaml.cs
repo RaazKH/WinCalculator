@@ -26,11 +26,14 @@ namespace Calculator
 {
     public sealed partial class MainPage : Page
     {
+        double prevResult = 0; // use for memory
+
         bool resultDisplayed = false;
         bool displayedDecimal = false;
         int openPCount = 0;
         int closedPCount = 0;
         int resultLen = 0;
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -88,11 +91,8 @@ namespace Calculator
 
             if (resultDisplayed == true)
             {
-                if (texr != "(")
-                {
-                    return;
-                }
                 Button_Special(bclear, e);
+                textBox1.Text = "" + prevResult;
                 resultDisplayed = false;
             }
 
@@ -195,12 +195,24 @@ namespace Calculator
 
             string eval = textBox1.Text;
             DataTable dt = new DataTable();
-            string result = " = " + dt.Compute(eval, "");
-            resultLen = result.Length;
+            try
+            {
+                prevResult = Convert.ToDouble(dt.Compute(eval, ""));
+                string result = " = " + prevResult;
+                resultLen = result.Length;
 
-            // Display
-            textBox1.Text += result;
-            resultDisplayed = true;
+                // Display
+                textBox1.Text += result;
+                resultDisplayed = true;
+            }
+            catch (System.Data.SyntaxErrorException ee)
+            {
+                string result = " = ERROR";
+                resultLen = result.Length;
+                textBox1.Text += result;
+                resultDisplayed = true;
+                Debug.WriteLine("Error with input: " + eval);
+            }
         }
 
         // keyinput method
