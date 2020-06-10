@@ -225,7 +225,7 @@ namespace Calculator
             }
             else
             {
-                Debug.WriteLine("Not mapped, keycode = " + e.Key);
+                // Debug.WriteLine("Not mapped, keycode = " + e.Key);
             }
         }
 
@@ -314,6 +314,4 @@ namespace Calculator
             }
         }
     }
-
-    
 }
