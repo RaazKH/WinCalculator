@@ -1,0 +1,152 @@
+List of colors:   Quality		Notes
+AliceBlue 	- Very bad
+AntiqueWhite    - Bad
+Aqua            - Bad
+Aquamarine      - Good
+Azure		- Very bad
+Beige		- Bad
+Bisque		- Neutral
+Black		- Very good
+BlanchedAlmond  - Neutral		A lighter bisque
+Blue		- Good			A bit harsh
+BlueViolet	- Very Good
+Brown		- Very Good
+BurlyWood	- Good
+CadetBlue	- Very Good
+Chartreuse	- Neutral		Can see but harsh
+Chocolate	- Very Good
+Coral		- Very Good
+CornflowerBlue  - Very Good
+Cornsilk	- Bad
+Crimson		- Very Good
+Cyan		- Neutral
+DarkBlue	- Very Good
+DarkCyan	- Very Good
+DarkGoldenrod	- Very Good
+DarkGray	- Good
+DarkGreen	- Very Good
+DarkKhaki	- Good
+DarkMagenta	- Good
+DarkOliveGreen	- Very Good
+DarkOrange	- Good
+DarkOrchid	- Very Good
+DarkRed		- Very Good
+DarkSalmon	- Good
+DarkSeaGreen	- Very Good
+DarkSlateBlue	- Very Good
+DarkSlateGray	- Very Good
+DarkTurquoise	- Good
+DarkViolet	- Good
+DeepPink	- Good
+DeepSkyBlue	- Good
+DimGray		- Very good
+DodgerBlue	- Good
+Firebrick	- Very Good
+FloralWhite	- Very Bad
+ForestGreen	- Very Good
+Fuchsia		- Good
+Gainsboro	- Good
+GhostWhite	- Very Bad
+Gold		- Good
+Goldenrod	- Very Good
+Gray		- Very Good
+Green		- Very Good
+GreenYellow	- Neutral
+Honeydew	- Very Bad
+HotPink		- Very Good
+IndianRed	- Very Good
+Indigo		- Very Good
+Ivory		- Very Bad
+Khaki		- Good
+Lavender	- Neutral
+LavenderBlush	- Neutral
+LawnGreen	- Good
+LemonChiffon	- Bad
+LightBlue	- Very Good
+LightCoral	- Very Good
+LightCyan	- Bad
+LightGoldenrodYe- Very Bad
+LightGray	- Good
+LightGreen	- Very Good
+LightPink	- Very Good
+LightSalmon	- Very Good
+LightSeaGreen	- Very Good
+LightSkyBlue	- Good
+LightSlateGray	- Very Good
+LightSteelBlue	- Good
+LightYellow	- Bad
+Lime		- Neutral
+LimeGreen	- Good
+Linen		- Bad
+Magenta		- Neutral
+Maroon		- Very Good
+MediumAquamarine- Very Good
+MediumBlue	- Very Good
+MediumOrchid	- Very Good
+MediumPurple	- Very Good
+MediumSeaGreen	- Very Good
+MediumSlateBlue	- Very Good
+MediumSpringGreen Neutral
+MediumTurquoise	- Very Good
+MediumVioletRed	- Very Good
+MidnightBlue	- Very Good
+MintCream 	- Bad
+MistyRose	- Neutral
+NavajoWhite	- Bad
+Navy		- Good
+OldLace		- Bad
+Olive		- Very Good
+OliveDrab	- Very Good
+Orange		- Good
+OrangeRed	- Good
+Orchid		- Very Good
+PaleGoldenrod	- Neutral
+PaleGreen	- Good
+PaleTurquoise	- Good
+PaleVioletRed	- Very Good
+PapayaWhip	- Bad
+PeachPuff	- Good
+Peru		- Very Good
+Pink		- Good
+Plum		- Very Good
+PowderBlue	- Very Good
+Purple		- Very Good
+Red		- Neutral
+RosyBrown	- Very Good
+RoyalBlue	- Very Good
+SaddleBrown	- Very Good
+Salmon		- Good
+SandyBrown	- Good
+SeaGreen	- Very Good
+SeaShell	- Bad
+Sienna		- Very Good
+Silver		- Good
+SkyBlue		- Very Good
+SlateBlue	- Very Good
+SlateGray	- Very Good
+Snow		- Bad
+SpringGreen	- Neutral
+SteelBlue	- Very Good
+Tan		- Very Good
+Teal		- Very Good
+Thistle		- Good
+Tomato		- Very Good
+Transparent	- Very Good?		Same as black
+Turquoise	- Good
+Violet		- Very Good
+Wheat		- Neutral
+White		- Worst
+WhiteSmoke	- Not any better
+Yellow		- Still bad
+YellowGreen	- Very Good
+
+
+
+
+
+
+
+
+
+
+

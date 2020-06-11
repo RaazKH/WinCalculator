@@ -5,6 +5,8 @@ using Windows.UI.Xaml.Input;
 using System.Diagnostics;
 using Windows.System;
 using System.Data;
+using System.Drawing;
+using Windows.UI.Xaml.Media;
 
 namespace Calculator
 {
@@ -26,6 +28,17 @@ namespace Calculator
 
             // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
+
+
+            // everything after this is for testing background color
+
+            //Windows.UI.Xaml.Media.SolidColorBrush brush = new Windows.UI.Xaml.Media.SolidColorBrush();
+            //SolidColorBrush b = (SolidColorBrush)page.Background;
+            //Debug.WriteLine(b.Color);
+            //Background.SetValue(page, b);
+            //Debug.WriteLine();
+
+            //page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.SaddleBrown };
         }
          
         // when a number or decimal is entered
