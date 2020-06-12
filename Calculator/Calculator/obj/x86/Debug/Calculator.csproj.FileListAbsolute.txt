@@ -43,3 +43,8 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\Multipl
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\AppCustomWindow.xbf
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\AppCustomWindow.g.i.cs
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\AppCustomWindow.g.cs
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\AppCustomWindow.xaml
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Debug\AppCustomWindow.xbf

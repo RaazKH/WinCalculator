@@ -30,9 +30,7 @@ namespace Calculator
             // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
 
-           //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-
-
+            //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
             // everything after this is for testing background color
 

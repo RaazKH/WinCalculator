@@ -20,7 +20,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -28,36 +27,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <!--Title bar stuff (row 0)-->
-        <Rectangle Grid.Row="0" 
-                   Grid.ColumnSpan="4" 
-                   Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
-        <TextBlock
-            Text="Calculator: Math Time"
-            Grid.Row="0"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Style="{StaticResource CaptionTextBlockStyle}"/>
-        <Button
-            AllowFocusOnInteraction="False"
-            Grid.Row="0" 
-            Grid.Column="0"
-            HorizontalAlignment="Left"
-            Margin="0,0,0,0"
-            FontFamily="Segoe MDL2 Assets"
-            Content="&#xE713;"
-            Click="Settings_Click"
-            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-            VerticalAlignment="Stretch"/>
-
         <TextBlock
             x:Name="textBox1"
             Text="0"
             Grid.ColumnSpan="4"
-            Grid.Row="1"
+            Grid.Row="0"
             TextAlignment="Right"
             FontSize="40"
             TextWrapping="Wrap"
@@ -74,7 +48,7 @@
             
             Foreground="White"
             
-            Grid.Row="6" 
+            Grid.Row="5" 
             Grid.Column="4"
             
             Margin="5,5,5,5" 
@@ -92,7 +66,7 @@
             
             Foreground="White"
             
-            Grid.Row="6" 
+            Grid.Row="5" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
@@ -110,7 +84,7 @@
             
             Foreground="White"
             
-            Grid.Row="5" 
+            Grid.Row="4" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
@@ -128,7 +102,7 @@
             
             Foreground="White"
             
-            Grid.Row="5"
+            Grid.Row="4"
             Grid.Column="1"
             
             Margin="5,5,5,5" 
@@ -146,7 +120,7 @@
             
             Foreground="White"
             
-            Grid.Row="5" 
+            Grid.Row="4" 
             Grid.Column="2"
             
             Margin="5,5,5,5" 
@@ -164,7 +138,7 @@
             
             Foreground="White"
             
-            Grid.Row="4" 
+            Grid.Row="3" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
@@ -182,7 +156,7 @@
             
             Foreground="White"
             
-            Grid.Row="4" 
+            Grid.Row="3" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
@@ -200,7 +174,7 @@
             
             Foreground="White"
             
-            Grid.Row="4" 
+            Grid.Row="3" 
             Grid.Column="2"
             
             Margin="5,5,5,5"
@@ -218,7 +192,7 @@
             
             Foreground="White"
             
-            Grid.Row="3" 
+            Grid.Row="2" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
@@ -236,7 +210,7 @@
             
             Foreground="White"
             
-            Grid.Row="3" 
+            Grid.Row="2" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
@@ -254,7 +228,7 @@
             
             Foreground="White"
             
-            Grid.Row="3" 
+            Grid.Row="2" 
             Grid.Column="2"
             
             Margin="5,5,5,5" 
@@ -271,7 +245,7 @@
             
             Foreground="White"
             
-            Grid.Row="6"
+            Grid.Row="5"
             Grid.Column="0"
             
             Margin="5,5,5,5"
@@ -289,7 +263,7 @@
             
             Foreground="White"
             
-            Grid.Row="6"
+            Grid.Row="5"
             Grid.Column="2"
             
             Margin="5,5,5,5" 
@@ -307,7 +281,7 @@
             
             Foreground="White"
             
-            Grid.Row="2" 
+            Grid.Row="1" 
             Grid.Column="0"
             
             Margin="5,5,5,5"
@@ -325,7 +299,7 @@
             
             Foreground="White"
             
-            Grid.Row="2" 
+            Grid.Row="1" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
@@ -342,7 +316,7 @@
             
             Foreground="White"
             
-            Grid.Row="2" 
+            Grid.Row="1" 
             Grid.Column="2" 
             
             Margin="5,5,5,5" 
@@ -360,7 +334,7 @@
             
             Foreground="White"
             
-            Grid.Row="5" 
+            Grid.Row="4" 
             Grid.Column="3"
             
             Margin="5,5,5,5" 
@@ -378,7 +352,7 @@
             
             Foreground="White"
             
-            Grid.Row="4"
+            Grid.Row="3"
             Grid.Column="4"
             
             Margin="5,5,5,5" 
@@ -396,7 +370,7 @@
             
             Foreground="White"
             
-            Grid.Row="3"
+            Grid.Row="2"
             Grid.Column="4"
             
             Margin="5,5,5,5"
@@ -414,7 +388,7 @@
             
             Foreground="White"
             
-            Grid.Row="2" 
+            Grid.Row="1" 
             Grid.Column="3"
             
             Margin="5,5,5,5" 
