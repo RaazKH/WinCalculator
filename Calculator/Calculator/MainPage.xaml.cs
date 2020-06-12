@@ -30,8 +30,13 @@ namespace Calculator
             // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
 
-           //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
+            // Hide titlebar panel and add new layout to title bar
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            Window.Current.SetTitleBar(UserLayout);
+
+            // Add LayoutMetricsChanged Event to TitleBar
+            var tBar = CoreApplication.GetCurrentView().TitleBar;
 
 
             // everything after this is for testing background color

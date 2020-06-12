@@ -28,9 +28,23 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+            <Grid x:Name="TopBar" Grid.Row="0" Grid.ColumnSpan="4">
+                <Grid x:Name="UserLayout" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+                <Grid Canvas.ZIndex="1">
+                    <Button
+                        AllowFocusOnInteraction="False"
+                        HorizontalAlignment="Left"
+                        Margin="0,0,0,0"
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE713;"
+                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        VerticalAlignment="Stretch"/>
+                </Grid>
+            </Grid>
+
 
         <!--Title bar stuff (row 0)-->
-        <Rectangle Grid.Row="0" 
+        <!--Rectangle Grid.Row="0" 
                    Grid.ColumnSpan="4" 
                    Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
         <TextBlock
@@ -51,7 +65,7 @@
             Content="&#xE713;"
             Click="Settings_Click"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-            VerticalAlignment="Stretch"/>
+            VerticalAlignment="Stretch"/-->
 
         <TextBlock
             x:Name="textBox1"
