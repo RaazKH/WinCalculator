@@ -27,6 +27,7 @@ namespace Calculator
         {
             this.InitializeComponent();
 
+            // Initializes C# Keyinput
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
 
             // Hide titlebar panel and add new layout to title bar
@@ -217,7 +218,7 @@ namespace Calculator
                 textBox1.Text += result;
                 resultDisplayed = true;
             }
-            catch (System.Data.SyntaxErrorException ee)
+            catch (System.Data.SyntaxErrorException)
             {
                 string result = " = ERROR";
                 resultLen = result.Length;
@@ -225,8 +226,13 @@ namespace Calculator
                 resultDisplayed = true;
                 Debug.WriteLine("Error with input: " + eval);
             }
+            catch (System.Data.EvaluateException)
+            {
+                // Somehow they put text in the box
+            }
         }
 
+        // Top left settings icon
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             textBox1.Text = "works";
