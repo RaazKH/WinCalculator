@@ -300,6 +300,10 @@ namespace Calculator
             {
                 Button_Click(b9, e);
             }
+            else if (key.KeyCode == 27) // Esc
+            {
+                // open settings
+            }
             else
             {
                 Debug.WriteLine("Not mapped, keycode = " + key.KeyCode);

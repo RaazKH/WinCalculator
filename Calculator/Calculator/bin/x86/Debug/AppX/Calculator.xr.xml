@@ -4,6 +4,7 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
       <RootEvent Name="KeyUp" />
     </RootType>

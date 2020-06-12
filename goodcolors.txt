@@ -141,7 +141,11 @@ Yellow		- Still bad
 YellowGreen	- Very Good
 
 
+https://docs.microsoft.com/en-us/windows/uwp/get-started/settings-learning-track
 
+
+
+https://partner.microsoft.com/en-us/dashboard/products/9NJK4J5BCNMM/submissions/1152921505690479115/CertificationStatus
 
 
 
