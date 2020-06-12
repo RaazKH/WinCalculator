@@ -29,14 +29,30 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <!--Title bar stuff (row 0)-->
         <Rectangle Grid.Row="0" 
                    Grid.ColumnSpan="4" 
                    Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
         <TextBlock
             Text="Calculator: Math Time"
             Grid.Row="0"
+            Grid.Column="1"
             Grid.ColumnSpan="2"
-            Margin="5,5,0,0"/>
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource CaptionTextBlockStyle}"/>
+        <Button
+            AllowFocusOnInteraction="False"
+            Grid.Row="0" 
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            Margin="0,0,0,0"
+            FontFamily="Segoe MDL2 Assets"
+            Content="&#xE713;"
+            Click="Settings_Click"
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+            VerticalAlignment="Stretch"/>
+
         <TextBlock
             x:Name="textBox1"
             Text="0"

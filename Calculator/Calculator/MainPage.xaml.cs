@@ -30,7 +30,9 @@ namespace Calculator
             // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
 
-            //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+           //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+
+
 
             // everything after this is for testing background color
 
@@ -319,6 +321,11 @@ namespace Calculator
             {
                 // Debug.WriteLine("Not mapped, keycode = " + e.Key);
             }
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "works";
         }
     }
 }
