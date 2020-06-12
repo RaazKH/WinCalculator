@@ -7,6 +7,7 @@ using Windows.System;
 using System.Data;
 using System.Drawing;
 using Windows.UI.Xaml.Media;
+using Windows.ApplicationModel.Core;
 
 namespace Calculator
 {
@@ -29,6 +30,7 @@ namespace Calculator
             // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
 
+            //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 
             // everything after this is for testing background color
 
@@ -299,10 +301,6 @@ namespace Calculator
             else if (key.KeyCode == 57) // 9
             {
                 Button_Click(b9, e);
-            }
-            else if (key.KeyCode == 27) // Esc
-            {
-                // open settings
             }
             else
             {

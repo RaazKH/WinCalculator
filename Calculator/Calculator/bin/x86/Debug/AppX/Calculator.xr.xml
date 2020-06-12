@@ -4,7 +4,6 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
       <RootEvent Name="KeyUp" />
     </RootType>
@@ -14,33 +13,41 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootEvent Name="KeyDown" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="IsTextScaleFactorEnabled" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="AllowFocusOnInteraction" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Tag" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Calculator.MainPage" />
   </Roots.RootTypes>
 </Roots>
