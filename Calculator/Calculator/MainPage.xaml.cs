@@ -27,9 +27,7 @@ namespace Calculator
         {
             this.InitializeComponent();
 
-            // turns keyinput on
             Window.Current.CoreWindow.CharacterReceived += KeyPressed;
-
 
             // Hide titlebar panel and add new layout to title bar
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
@@ -228,28 +226,17 @@ namespace Calculator
                 Debug.WriteLine("Error with input: " + eval);
             }
         }
-        
-        // keyinput method
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "works";
+        }
+
+        // This method covers all the keys which did not have proper accelerators in the XAML
         private void KeyPressed(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs key)
         {
             RoutedEventArgs e = new RoutedEventArgs();
-            if (key.KeyCode == 8) // Backspace
-            {
-                Button_Special(bbackspace, e);
-            }
-            else if (key.KeyCode == 13) // Enter
-            {
-                Button_Evaluate(bequals, e);
-            }
-            else if (key.KeyCode == 40) // (
-            {
-                Button_Symbol(bopenP, e);
-            }
-            else if (key.KeyCode == 41) // )
-            {
-                Button_Symbol(bcloseP, e);
-            }
-            else if (key.KeyCode == 42) // *
+            if (key.KeyCode == 42) // *
             {
                 Button_Symbol(btimes, e);
             }
@@ -267,70 +254,16 @@ namespace Calculator
             }
             else if (key.KeyCode == 47) // /
             {
-                Button_Evaluate(bdivided, e);
+                Button_Symbol(bdivided, e);
             }
-            else if (key.KeyCode == 48) // 0
+            else if (key.KeyCode == 61) // =
             {
-                Button_Click(b0, e);
-            }
-            else if (key.KeyCode == 49) // 1
-            {
-                Button_Click(b1, e);
-            }
-            else if (key.KeyCode == 50) // 2
-            {
-                Button_Click(b2, e);
-            }
-            else if (key.KeyCode == 51) // 3
-            {
-                Button_Click(b3, e);
-            }
-            else if (key.KeyCode == 52) // 4
-            {
-                Button_Click(b4, e);
-            }
-            else if (key.KeyCode == 53) // 5
-            {
-                Button_Click(b5, e);
-            }
-            else if (key.KeyCode == 54) // 6
-            {
-                Button_Click(b6, e);
-            }
-            else if (key.KeyCode == 55) // 7
-            {
-                Button_Click(b7, e);
-            }
-            else if (key.KeyCode == 56) // 8
-            {
-                Button_Click(b8, e);
-            }
-            else if (key.KeyCode == 57) // 9
-            {
-                Button_Click(b9, e);
+                Button_Evaluate(bequals, e);
             }
             else
             {
                 Debug.WriteLine("Not mapped, keycode = " + key.KeyCode);
             }
-        }
-
-        // keyinput method (old)
-        private void Grid_KeyPressed(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Delete)
-            {
-                //Button_Special(bclear, e);
-            }
-            else
-            {
-                // Debug.WriteLine("Not mapped, keycode = " + e.Key);
-            }
-        }
-
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-            textBox1.Text = "works";
         }
     }
 }
