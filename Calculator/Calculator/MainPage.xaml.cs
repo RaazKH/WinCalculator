@@ -249,9 +249,7 @@ namespace Calculator
             {
                 comboB.Width = 0;
                 boxVis = false;
-
-
-                // change focus
+                bequals.Focus(FocusState.Programmatic);
             }
         }
 
@@ -293,6 +291,10 @@ namespace Calculator
         {   string bg = comboB.SelectedItem.ToString();
             localSettings.Values["Background"] = comboB.SelectedItem.ToString();
             changeBG(bg);
+
+            // focus the enter key
+            bequals.Focus(FocusState.Programmatic);
+            // close the button
         }
 
         // write background selector method which takes a string and 
