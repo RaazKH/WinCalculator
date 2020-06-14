@@ -19,24 +19,24 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>8033FFA242D547CEB77EC9E83C1ABCE79822018166F81DBEB30A93DEA8284BAA</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>31842Raaz.CalculatorMathTime_1.0.1.0_x86__31ea2ce31ppe4</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>02CDEE31C83820AD97A7BD1BA4C3E47413E3A2C87EEC179307C95B641A133DAC</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>31842Raaz.CalculatorMathTime_1.2.0.0_x86__31ea2ce31ppe4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>31842Raaz.CalculatorMathTime_31ea2ce31ppe4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>31842Raaz.CalculatorMathTime</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=682A159F-7FB0-46B1-A3BB-CF52959E19A8</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.1.0</RegisteredVersion>
+    <RegisteredVersion>1.2.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-06-14T01:30:18.815</Modified>
+      <Modified>2020-06-14T04:13:23.016</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2020-06-14T01:30:16.346</Modified>
+      <Modified>2020-06-14T04:03:08.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -331,15 +331,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
-      <Modified>2020-06-13T23:11:15.367</Modified>
+      <Modified>2020-06-14T04:03:08.413</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-06-14T01:30:15.714</Modified>
+      <Modified>2020-06-14T04:13:22.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-06-14T01:30:15.712</Modified>
+      <Modified>2020-06-14T04:13:22.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -347,11 +347,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-06-12T17:01:42.321</Modified>
+      <Modified>2020-06-14T04:03:08.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2020-06-14T01:30:18.779</Modified>
+      <Modified>2020-06-14T04:13:23.008</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,17 +1,17 @@
 LIBRARY kernel32.dll
 EXPORTS
-   DuplicateHandle
    FormatMessageW
-   CheckTokenMembershipEx
-   LocalFree
-
-   LocalAlloc
-
-
+   GetCurrentProcess
    GetCurrentThread
 
+   LocalFree
 
-   GetCurrentProcess
-   CloseHandle
+
+
    SetFileCompletionNotificationModes
 
+   DuplicateHandle
+   LocalAlloc
+
+   CheckTokenMembershipEx
+   CloseHandle

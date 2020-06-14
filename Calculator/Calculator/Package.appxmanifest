@@ -9,7 +9,7 @@
   <Identity
     Name="31842Raaz.CalculatorMathTime"
     Publisher="CN=682A159F-7FB0-46B1-A3BB-CF52959E19A8"
-    Version="1.0.1.0" />
+    Version="1.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="5f7545a3-9814-47e9-b1b2-81d741574195" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

@@ -247,7 +247,6 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Release\Syste
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Release\WindowsBase.dll
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Release\mscorlib.dll
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x86\Release\netstandard.dll
-C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Release\Calculator.csprojAssemblyReference.cache
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Release\App.g.i.cs
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Release\App.g.cs
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x86\Release\MainPage.g.i.cs

@@ -50,7 +50,7 @@ namespace Calculator
             {
                 string bg = localSettings.Values["Background"] as string;
                 comboB.PlaceholderText = bg;
-                changeBG(bg);
+                ChangeBG(bg);
             }
         }
          
@@ -287,10 +287,10 @@ namespace Calculator
             }
         }
 
-        private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {   string bg = comboB.SelectedItem.ToString();
             localSettings.Values["Background"] = comboB.SelectedItem.ToString();
-            changeBG(bg);
+            ChangeBG(bg);
 
             // focus the enter key
             bequals.Focus(FocusState.Programmatic);
@@ -298,7 +298,7 @@ namespace Calculator
         }
 
         // write background selector method which takes a string and 
-        private void changeBG(string s)
+        private void ChangeBG(string s)
         {
             switch (s)
             {

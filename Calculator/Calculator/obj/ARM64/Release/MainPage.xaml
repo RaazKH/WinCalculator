@@ -6,13 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="SaddleBrown"
-                           >
-    <!--
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
+    Background="LightCoral"
+    x:Name="page">
 
-    <Grid x:ConnectionId='2'                          
-          TabFocusNavigation="Once">
+    <!-- Turn off the tab button -->
+    <Grid TabFocusNavigation="Once">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,6 +18,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <!-- Row 0 has a height of 32 for the title bar -->
+            <RowDefinition Height="32"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -28,191 +28,339 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:ConnectionId='3'
-            x:Name="textBox1"
-            Text="0"
-            Grid.ColumnSpan="4"
-            TextAlignment="Right"
-            FontSize="40"
-            TextWrapping="Wrap"
-            Margin="5,0,5,0"
-            IsTextScaleFactorEnabled="True"/>
-
-        <Button x:ConnectionId='4' 
+        <!-- Equals button up here for focus -->
+        <Button x:ConnectionId='2' 
             x:Name="bequals"
             Content="="
                                    
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="True"
             
-            Grid.Row="5" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="6" 
             Grid.Column="4"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Enter"/>
+            </Button.KeyboardAccelerators>
+        </Button>
 
+        <!-- Title bar stuff (row 0) -->
+        <Grid x:ConnectionId='3' x:Name="TopBar" Grid.Row="0" Grid.ColumnSpan="4">
+            <Grid x:ConnectionId='24' x:Name="UserLayout" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <!--TextBlock
+                    Text="Calculator"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource CaptionTextBlockStyle}"/-->
+            </Grid>
+            <Grid Canvas.ZIndex="1">
+                <Button x:ConnectionId='25'
+                    AllowFocusOnInteraction="False"
+                    HorizontalAlignment="Left"
+                    Margin="0,0,0,0"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE713;"
+                    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    VerticalAlignment="Stretch"
+                                          />
+
+                <ComboBox x:ConnectionId='26' x:Name="comboB"
+                          AllowFocusOnInteraction="True"
+                          Width="0" 
+                          Margin="46,0,0,0" 
+                          Grid.ColumnSpan="2" 
+                          VerticalAlignment="Stretch"
+                          Visibility="Visible"
+                                                                    
+                          PlaceholderText="Aqua">
+                    <x:String>Amoeba</x:String>
+                    <x:String>Black</x:String>
+                    <x:String>Blue</x:String>
+                    <x:String>Brown</x:String>
+                    <x:String>Green</x:String>
+                    <x:String>Gray</x:String>
+                    <x:String>Pink</x:String>
+                    <x:String>Purple</x:String>
+                    <x:String>Olive</x:String>
+                    <x:String>Red</x:String>
+                    <x:String>Salmon</x:String>
+                    <x:String>Sky</x:String>
+                    <x:String>Steel</x:String>
+                </ComboBox>
+            </Grid>
+        </Grid>
+        
+        <!-- Text Block -->
+        <TextBlock x:ConnectionId='4'
+            x:Name="textBox1"
+            Text="0"
+            Grid.ColumnSpan="4"
+            Grid.Row="1"
+            TextAlignment="Right"
+            FontSize="40"
+            TextWrapping="Wrap"
+            Margin="5,0,5,0"
+            IsTextScaleFactorEnabled="True"
+            Foreground="White"/>
+
+        <!-- Button 0 -->
         <Button x:ConnectionId='5' 
             x:Name="b0"
             Content="0"
                                 
             Tag="0"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="5" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="6" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number0"/>
+                <KeyboardAccelerator  Key="NumberPad0"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 1 -->
         <Button x:ConnectionId='6' 
             x:Name="b1"
             Content="1"
                                 
             Tag="1"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="4" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="5" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number1"/>
+                <KeyboardAccelerator  Key="NumberPad1"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 2 -->
         <Button x:ConnectionId='7' 
             x:Name="b2"
             Content="2"
                                 
             Tag="2"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="4"
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="5"
             Grid.Column="1"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"  
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number2"/>
+                <KeyboardAccelerator  Key="NumberPad2"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 3 -->
         <Button x:ConnectionId='8' 
             x:Name="b3"
             Content="3"
                                 
             Tag="3"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="4" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="5" 
             Grid.Column="2"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number3"/>
+                <KeyboardAccelerator  Key="NumberPad3"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 4 -->
         <Button x:ConnectionId='9' 
             x:Name="b4"
             Content="4"
                                 
             Tag="4"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="3" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="4" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number4"/>
+                <KeyboardAccelerator  Key="NumberPad4"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 5 -->
         <Button x:ConnectionId='10' 
             x:Name="b5"
             Content="5"
                                 
             Tag="5"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="3" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="4" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number5"/>
+                <KeyboardAccelerator  Key="NumberPad5"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 6 -->
         <Button x:ConnectionId='11' 
             x:Name="b6"
             Content="6"
                                 
             Tag="6"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="3" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="4" 
             Grid.Column="2"
             
             Margin="5,5,5,5"
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number6"/>
+                <KeyboardAccelerator  Key="NumberPad6"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 7 -->
         <Button x:ConnectionId='12' 
             x:Name="b7"
             Content="7"
                                 
             Tag="7"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="2" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="3" 
             Grid.Column="0"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number7"/>
+                <KeyboardAccelerator  Key="NumberPad7"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 8 -->
         <Button x:ConnectionId='13' 
             x:Name="b8"
             Content="8"
                                 
             Tag="8"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="2" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="3" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number8"/>
+                <KeyboardAccelerator  Key="NumberPad8"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Button 9 -->
         <Button x:ConnectionId='14' 
             x:Name="b9"
             Content="9"
                                 
             Tag="9"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="2" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="3" 
             Grid.Column="2"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number9"/>
+                <KeyboardAccelerator  Key="NumberPad9"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Clear Button -->
         <Button x:ConnectionId='15' 
             x:Name="bclear"
             Content="Clear"
@@ -220,62 +368,90 @@
             Tag="clear"
             AllowFocusOnInteraction="False"
             
+            Foreground="White"
+            CornerRadius="10"
+            
             Grid.Row="6"
             Grid.Column="0"
             
             Margin="5,5,5,5"
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Delete"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Decimal Button -->
         <Button x:ConnectionId='16' 
             x:Name="bdecimal"
             Content="."
                                 
             Tag="."
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="5"
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="6"
             Grid.Column="2"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
-        
+
+        <!-- Open Parentheses Button -->
         <Button x:ConnectionId='17' 
             x:Name="bopenP"
             Content="("
                                  
             Tag="("
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="1" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="2" 
             Grid.Column="0"
             
             Margin="5,5,5,5"
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number9" Modifiers="Shift" />
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Close Parentheses Button -->
         <Button x:ConnectionId='18' 
             x:Name="bcloseP"
             Content=")"
                                  
             Tag=")"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="1" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="2" 
             Grid.Column="1"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Number0" Modifiers="Shift" />
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Backspace Button -->
         <Button x:ConnectionId='19' 
             x:Name="bbackspace"
             Content="DEL"
@@ -283,55 +459,74 @@
             Tag="back"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="1" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="2" 
             Grid.Column="2" 
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch"/>
-        
+            VerticalAlignment="Stretch">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator  Key="Back"/>
+            </Button.KeyboardAccelerators>
+        </Button>
+
+        <!-- Plus Button -->
         <Button x:ConnectionId='20' 
             x:Name="bplus"
             Content="+"
                                  
             Tag="+"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="4" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="5" 
             Grid.Column="3"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
-        
+
+        <!-- Minus Button -->
         <Button x:ConnectionId='21' 
             x:Name="bminus"
             Content="-"
                                  
             Tag="-"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="3"
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="4"
             Grid.Column="4"
             
             Margin="5,5,5,5" 
             
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"/>
-        
+
+        <!-- Multiplication Button -->
         <Button x:ConnectionId='22' 
             x:Name="btimes"
             Content="x"
                                  
             Tag="*"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="2"
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="3"
             Grid.Column="4"
             
             Margin="5,5,5,5"
@@ -339,15 +534,19 @@
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch"/>
 
+        <!-- Division Button -->
         <Button x:ConnectionId='23' 
             x:Name="bdivided"
             Content="÷"
                                  
             Tag="/"
-            FontSize="25"
+            FontSize="20"
             AllowFocusOnInteraction="False"
             
-            Grid.Row="1" 
+            Foreground="White"
+            CornerRadius="10"
+            
+            Grid.Row="2" 
             Grid.Column="3"
             
             Margin="5,5,5,5" 

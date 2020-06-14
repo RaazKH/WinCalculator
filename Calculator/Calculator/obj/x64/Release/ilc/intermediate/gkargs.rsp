@@ -2,6 +2,6 @@
 /Lib:"C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x64\Release\ilc\in"
 /Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.native.compiler\2.2.7-rel-27913-00\tools\x64\ilc\lib\Private"
 /WinMD:"C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x64\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"e46a4d7f-d67e-4232-93b6-7480cf7b258c","Id":"3f172032-5ddc-46b4-862b-265fb72b9da2","ProcessStartTime":637274072374687852}"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"e46a4d7f-d67e-4232-93b6-7480cf7b258c","Id":"499d62da-c16d-43ec-908a-0bdfe362bec3","ProcessStartTime":637275862788768993}"
 /RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.7-rel-27913-00\tools\LibraryXML"
 /RunOnlyPreDR

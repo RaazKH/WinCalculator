@@ -78,7 +78,7 @@
                           Grid.ColumnSpan="2" 
                           VerticalAlignment="Stretch"
                           Visibility="Visible"
-                          SelectionChanged="comboB_SelectionChanged"
+                          SelectionChanged="ComboB_SelectionChanged"
                           PlaceholderText="Aqua">
                     <x:String>Amoeba</x:String>
                     <x:String>Black</x:String>

@@ -247,6 +247,7 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Release\Syste
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Release\WindowsBase.dll
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Release\mscorlib.dll
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\ARM\Release\netstandard.dll
+C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\Calculator.csprojAssemblyReference.cache
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\App.g.i.cs
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\App.g.cs
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\MainPage.g.i.cs
@@ -720,4 +721,3 @@ C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\ilc\i
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\ilc\intermediate\Resources\System.Transactions.Local.index.txt
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\ilc\intermediate\rhbindargs.Calculator.rsp
 C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\ilc\intermediate\System.Private.Calculator.Generated.dll
-C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\ARM\Release\Calculator.csprojAssemblyReference.cache

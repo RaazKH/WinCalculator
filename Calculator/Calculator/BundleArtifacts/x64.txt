@@ -1,2 +1,1 @@
-MainPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x64\Release\Calculator_1.0.1.0_x64.msix
-SymbolPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\obj\x64\Release\Symbols\Calculator_1.0.1.0_x64.appxsym
+MainPackage=C:\Users\serxt\Desktop\WinCalculator\Calculator\Calculator\bin\x64\Release\Calculator_1.2.0.0_x64.msix
