@@ -8,11 +8,17 @@ using System.Data;
 using System.Drawing;
 using Windows.UI.Xaml.Media;
 using Windows.ApplicationModel.Core;
+using Windows.Storage;
+using System.Linq;
 
 namespace Calculator
 {
     public sealed partial class MainPage : Page
     {
+        // theme managment
+        bool boxVis = false;
+        ApplicationDataContainer localSettings;
+
         //  result management
         double prevResult = 0;
         int resultLen = 0;
@@ -34,19 +40,18 @@ namespace Calculator
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(UserLayout);
 
-            // Add LayoutMetricsChanged Event to TitleBar
-            var tBar = CoreApplication.GetCurrentView().TitleBar;
-
-
-            // everything after this is for testing background color
-
-            //Windows.UI.Xaml.Media.SolidColorBrush brush = new Windows.UI.Xaml.Media.SolidColorBrush();
-            //SolidColorBrush b = (SolidColorBrush)page.Background;
-            //Debug.WriteLine(b.Color);
-            //Background.SetValue(page, b);
-            //Debug.WriteLine();
-
-            //page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.SaddleBrown };
+            // Initialize settings
+            localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            if (localSettings.Values.Count() == 0)
+            {
+                comboB.PlaceholderText = "Amoeba";
+            }
+            else
+            {
+                string bg = localSettings.Values["Background"] as string;
+                comboB.PlaceholderText = bg;
+                changeBG(bg);
+            }
         }
          
         // when a number or decimal is entered
@@ -235,7 +240,19 @@ namespace Calculator
         // Top left settings icon
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            textBox1.Text = "works";
+            if (boxVis == false)
+            {
+                comboB.Width = 200;
+                boxVis = true;
+            }
+            else
+            {
+                comboB.Width = 0;
+                boxVis = false;
+
+
+                // change focus
+            }
         }
 
         // This method covers all the keys which did not have proper accelerators in the XAML
@@ -269,6 +286,62 @@ namespace Calculator
             else
             {
                 Debug.WriteLine("Not mapped, keycode = " + key.KeyCode);
+            }
+        }
+
+        private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {   string bg = comboB.SelectedItem.ToString();
+            localSettings.Values["Background"] = comboB.SelectedItem.ToString();
+            changeBG(bg);
+        }
+
+        // write background selector method which takes a string and 
+        private void changeBG(string s)
+        {
+            switch (s)
+            {
+                case "Amoeba":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightCoral };
+                    break;
+                case "Black":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.Black };
+                    break;
+                case "Blue":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.RoyalBlue };
+                    break;
+                case "Brown":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.SaddleBrown };
+                    break;
+                case "Green":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightGreen };
+                    break;
+                case "Gray":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.DimGray };
+                    break;
+                case "Pink":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.Plum };
+                    break;
+                case "Purple":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.MediumPurple };
+                    break;
+                case "Olive":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.DarkOliveGreen };
+                    break;
+                case "Red":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.Tomato };
+                    break;
+                case "Salmon":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightSalmon };
+                    break;
+                case "Sky":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightSkyBlue };
+                    break;
+                case "Steel":
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightSlateGray };
+                    break;
+                default:
+                    page.Background = new SolidColorBrush() { Opacity = 1, Color = Windows.UI.Colors.LightCoral };
+                    break;
             }
         }
     }

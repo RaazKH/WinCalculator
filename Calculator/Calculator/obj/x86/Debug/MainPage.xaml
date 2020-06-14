@@ -70,6 +70,30 @@
                     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                     VerticalAlignment="Stretch"
                                           />
+
+                <ComboBox x:ConnectionId='26' x:Name="comboB"
+                          AllowFocusOnInteraction="True"
+                          Width="0" 
+                          Margin="46,0,0,0" 
+                          Grid.ColumnSpan="2" 
+                          VerticalAlignment="Stretch"
+                          Visibility="Visible"
+                                                                    
+                          PlaceholderText="Aqua">
+                    <x:String>Amoeba</x:String>
+                    <x:String>Black</x:String>
+                    <x:String>Blue</x:String>
+                    <x:String>Brown</x:String>
+                    <x:String>Green</x:String>
+                    <x:String>Gray</x:String>
+                    <x:String>Pink</x:String>
+                    <x:String>Purple</x:String>
+                    <x:String>Olive</x:String>
+                    <x:String>Red</x:String>
+                    <x:String>Salmon</x:String>
+                    <x:String>Sky</x:String>
+                    <x:String>Steel</x:String>
+                </ComboBox>
             </Grid>
         </Grid>
         
